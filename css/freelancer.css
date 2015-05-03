@@ -221,10 +221,14 @@ section.success a.active {
 }
 
 #about .info .info-labels {
-    float: left;
     font-weight: bold;
 }
     
+#about .info .info-labels,
+#about .info .info-data {
+    display: inline-block;
+}
+
 #about .info .info-data p:before {
     content: ": ";
 }
