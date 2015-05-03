@@ -97,22 +97,26 @@ Main components
 }
 
 .cd-timeline-label {
-  text-align: center;
   margin-top: 0;
 }
-
 .cd-timeline-label h2 {
   font-size: 2em;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-label {
+    text-align: center;
+  }
 }
 
 .cd-timeline-point {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  /*box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
+  background-color: white;
+  border: 4px solid #d7e4ed;
 }
 .cd-timeline-img {
   position: absolute;
@@ -155,8 +159,6 @@ Main components
     height: 30px;
     left: 50%;
     margin-left: -15px;
-    background-color: white;
-    border: 4px solid #d7e4ed;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -302,24 +304,24 @@ Main components
 .cd-timeline-point ~ .cd-timeline-content::before {
   top: 8px;
 }
-@media only screen and (min-width: 768px) {
-  .cd-timeline-content h2 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  .cd-timeline-content h3 {
-    font-size: 17px;
-    font-size: 1.1rem;
-  }
-  .cd-timeline-content p {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
+
+.cd-timeline-content h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
 }
+.cd-timeline-content h3 {
+  font-size: 17px;
+  font-size: 1.1rem;
+}
+.cd-timeline-content p {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     margin-left: 0;
