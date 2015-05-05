@@ -1,0 +1,28 @@
+{% comment %}
+All this bullshit just gets the the items to render in centered rows of three.
+I hate this. Must fix later.
+{% endcomment %}
+{% assign numrows = site.projects.size | divided_by: 3 | floor %}
+
+{% for project in site.projects %}
+	{% assign colnum = forloop.index | minus: 1 | modulo: 3 %}
+	{% assign rownum = forloop.index | minus: 1 | divided_by: 3 | floor %}
+
+	{% if colnum == 0 and rownum == numrows %}
+		{% assign lastrow = site.projects.size | modulo: 3 %}
+		{% assign offset = 3 | minus: lastrow | times: 2 %}
+	{% else %}
+		{% assign offset = 0 %}
+	{% endif %}
+
+	<div class="col-sm-4 col-sm-offset-{{offset}} portfolio-item">
+	    <a href="#{{project.id}}" class="portfolio-link" data-toggle="modal">
+	        <div class="caption">
+	            <div class="caption-content">
+	                <i class="fa fa-search-plus fa-3x"></i>
+	            </div>
+	        </div>
+	        <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
+	    </a>
+	</div>
+{% endfor %}
