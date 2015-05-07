@@ -16,19 +16,19 @@
                             <img src="img/portfolio/{{project.id}}.png" class="img-responsive img-centered" alt="{{project.title}} Logo">
                             {{project.content}}
                             <ul class="list-inline item-details">
-                                {{% if project.website %}}
+                                {% if project.website %}
 	                                <li>
 	                                	Website:
 	                                    <strong><a href="{{project.website}}" target="_blank">{{project.website}}</a></strong>
 	                                </li>
-                                {{% endif %}}
+                                {% endif %}
 
-                                {{% if project.source %}}
+                                {% if project.source %}
 	                                <li>
 	                                	Source:
 	                                    <strong><a href="{{project.source}}" target="_blank">{{project.source}}</a></strong>
 	                                </li>
-                                {{% endif %}}
+                                {% endif %}
 
                                 <li>Developed: <strong>{{project.developed}}</strong></li>
                             </ul>
