@@ -1,6 +1,12 @@
-exclude: [vendor, CNAME, Gemfile, Gemfile.lock, LICENSE, README.md]
+exclude:
+  - vendor
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
 collections:
-- projects
+  - projects
 sass:
-	sass_dir: css
-	style: :compressed
+  sass_dir: css
+  style: :compressed
