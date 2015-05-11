@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var $timeline_blocks = $('.cd-timeline-block');
-	var $hide_classes = '.cd-timeline-img, .cd-timeline-point, .cd-timeline-content'
+	var $hide_classes = '.cd-timeline-img, .cd-timeline-point, .cd-timeline-content';
 
 	//hide timeline blocks which are outside the viewport
 	$timeline_blocks.each(function(){
