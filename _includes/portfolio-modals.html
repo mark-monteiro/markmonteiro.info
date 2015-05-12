@@ -13,8 +13,10 @@
                         <div class="modal-body">
                             <h2>{{project.title}}</h2>
                             <hr class="hr-primary">
-                            <img src="img/portfolio/{{project.id}}.png" class="img-responsive img-centered" alt="{{project.title}} Logo">
-                            {{project.content}}
+                            <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
+                            <div class="modal-text">
+                                {{project.content}}
+                            </div>
                             <ul class="list-inline item-details">
                                 {% if project.website %}
 	                                <li>
