@@ -14,25 +14,31 @@
                             <h2>{{project.title}}</h2>
                             <hr class="hr-primary">
                             <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
+                            <ul class="list-inline details">
+                                {% if project.website %}
+                                    <li>
+                                        <strong>Website</strong>
+                                        <a href="{{project.website}}" target="_blank">{{project.website}}</a>
+                                    </li>
+                                {% endif %}
+                                {% if project.source %}
+                                    <li>
+                                        <strong>Source</strong>
+                                        <a href="{{project.source}}" target="_blank">{{project.source}}</a>
+                                    </li>
+                                {% endif %}
+                                <li>
+                                    <strong>Developed</strong>
+                                    {{project.developed}}
+                                </li>
+                            </ul>
                             <div class="modal-text">
                                 {{project.content}}
                             </div>
-                            <ul class="list-inline item-details">
-                                {% if project.website %}
-	                                <li>
-	                                	Website:
-	                                    <strong><a href="{{project.website}}" target="_blank">{{project.website}}</a></strong>
-	                                </li>
-                                {% endif %}
-
-                                {% if project.source %}
-	                                <li>
-	                                	Source:
-	                                    <strong><a href="{{project.source}}" target="_blank">{{project.source}}</a></strong>
-	                                </li>
-                                {% endif %}
-
-                                <li>Developed: <strong>{{project.developed}}</strong></li>
+                            <ul class="list-inline technologies">
+                                {% for technology in project.technologies %}
+                                    <li>{{technology}}</li>
+                                {% endfor %}
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
