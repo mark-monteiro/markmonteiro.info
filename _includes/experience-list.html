@@ -1,0 +1,36 @@
+{% for experience in site.experiences %}
+	<div class="cd-timeline-block">
+        <div class="cd-timeline-point"></div>
+        <div class="cd-timeline-content">
+            <h2>{{experience.title}}</h2>
+            <h3>{{experience.company}}</h3>
+            <span class='cd-timeline-location'>{{experience.location}}</span>
+            {{experience.content}}
+            {% if experience.projects %}
+                <div class="projects">
+                    <strong>Projects</strong>:&nbsp;
+                    <ul>
+                        {% for project_id in experience.projects %}
+                            {% for project in site.projects %}
+                                {% if project.id == project_id %}
+                                    <li><a href="#{{project.id}}" data-toggle="modal">{{project.title}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {% if experience.technologies %}
+                <div class="technologies">
+                    <strong>Technologies</strong>:&nbsp;
+                    <ul>
+                        {% for tech in experience.technologies %}
+                            <li>{{tech}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <span class="cd-date">{{experience.dates}}</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+{% endfor %}
