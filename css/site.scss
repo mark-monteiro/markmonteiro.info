@@ -1,5 +1,7 @@
 ---
 ---
+@import "bourbon/bourbon";
+@import "variables";
 
 html {
   font-size: 15px;
@@ -25,7 +27,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $montserrat;
   font-weight: 700;
 }
 
@@ -66,7 +68,7 @@ header {
     .name {
       display: block;
       text-transform: uppercase;
-      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-family: $montserrat;
       font-size: 2em;
       font-weight: 700;
     }

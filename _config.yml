@@ -9,5 +9,12 @@ collections:
   - projects
   - experiences
 sass:
-  sass_dir: css
   style: :compressed
+
+# Plugins supported by Github Pages
+#gems:
+#- jekyll-mentions
+#- jemoji
+#- jekyll-redirect-from
+#- jekyll-sitemap
+#- jekyll-feed
