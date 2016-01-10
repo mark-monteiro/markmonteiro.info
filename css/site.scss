@@ -48,6 +48,14 @@ hr {
   }
 }
 
+// Vertical center bootstrap columns
+// Requires removing any whitespace between cols (i.e. with <!-- -->)
+.col-vcenter {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 header {
   text-align: center;
   color: #fff;
@@ -90,6 +98,9 @@ header {
         
         a {
           color: #FFFFFF;
+          &:hover {
+            // TODO: add hover color
+          }
         }
       }
     }
@@ -191,16 +202,11 @@ section {
   .info {
     padding: 10px;
 
-    .info-labels {
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .info-data {
-      display: inline-block;
-      p:before {
-        content: ": ";
-      }
+    dl {
+      margin: 15px auto;
+      width: 350px;
+      dt { width: 100px; }
+      dd { margin-left: 120px; margin-bottom: 5px; }
     }
 
     .fa-download {
