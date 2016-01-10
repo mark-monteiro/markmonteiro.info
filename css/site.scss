@@ -17,11 +17,11 @@ p {
 
 a {
   outline: 0;
-  color: #18bc9c;
+  color: $green;
 
   &:hover, &:focus, &:active, &.active {
     outline: 0;
-    color: #18bc9c;
+    color: $green;
   }
 }
 
@@ -44,14 +44,14 @@ hr {
     border-color: #fff;
   }
   &.hr-primary {
-    border-color: #2c3e50;
+    border-color: $blue;
   }
 }
 
 header {
   text-align: center;
   color: #fff;
-  background: #18bc9c;
+  background: $green;
 
   .container {
     padding-top: 100px;
@@ -142,14 +142,10 @@ header {
 @media (min-width: 768px) {
   .navbar-fixed-top {
     padding: 25px 0;
-    -webkit-transition: padding .3s;
-    -moz-transition: padding .3s;
-    transition: padding .3s;
+    @include transition(all .3s);
     .navbar-brand {
       font-size: 2em;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      transition: all .3s;
+      @include transition(all .3s);
     }
     &.navbar-shrink {
       padding: 10px 0;
@@ -170,10 +166,10 @@ section {
     background: #f0f2f7;
     a {
       outline: 0;
-      color: #2c3e50;
+      color: $blue;
       &:hover, &:focus, &:active, &.active {
         outline: 0;
-        color: #2c3e50;
+        color: $blue;
       }
     }
   }
@@ -251,9 +247,7 @@ section {
         height: 100%;
         opacity: 0;
         background: rgba(24, 188, 156, 0.9);
-        -webkit-transition: all ease .5s;
-        -moz-transition: all ease .5s;
-        transition: all ease .5s;
+        @include transition(all ease .5s);
         &:hover {
           opacity: 1;
         }
@@ -293,10 +287,10 @@ section {
   font-size: 20px;
   color: #fff;
   background: 0 0;
-  transition: all .3s ease-in-out;
+  @include transition(all .3s ease-in-out);
   &:hover, &:focus, &:active, &.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: $green;
     background: #fff;
   }
 }
@@ -340,7 +334,6 @@ footer {
     border-radius: 0;
     text-align: center;
     background-clip: border-box;
-    -webkit-box-shadow: none;
     box-shadow: none;
     h2 {
       margin: 0;
@@ -393,18 +386,14 @@ footer {
       width: 1px;
       height: 75px;
       margin-left: 35px;
-      background-color: #2c3e50;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+      background-color: $blue;
+      @include transform(rotate(45deg));
       .rl {
         z-index: 1052;
         width: 1px;
         height: 75px;
-        background-color: #2c3e50;
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
+        background-color: $blue;
+        @include transform(rotate(90deg))
       }
     }
   }
