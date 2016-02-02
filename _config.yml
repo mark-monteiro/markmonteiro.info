@@ -1,3 +1,13 @@
+# Github Unmodifiable Settings
+safe: true
+lsi: false
+source: .
+
+# Github Defaults
+markdown:    kramdown
+highlighter: rouge
+#github: [Repository metadata]
+
 exclude:
   - vendor
   - CNAME
