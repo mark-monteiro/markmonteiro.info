@@ -16,13 +16,9 @@ I hate this. Must fix later.
 	{% endif %}
 
 	<div class="col-sm-4 col-sm-offset-{{offset}} portfolio-item">
-	    <a href="#{{project.id}}" class="portfolio-link" data-toggle="modal">
-	        <div class="caption">
-	            <div class="caption-content">
-	                <i class="fa fa-search-plus fa-3x"></i>
-	            </div>
-	        </div>
+	    <button type="button" class="btn btn-link portfolio-link" data-toggle="modal" data-target="#{{project.id}}">
+	        <div class="caption fa fa-search-plus"></div>
 	        <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
-	    </a>
+	    </button>
 	</div>
 {% endfor %}

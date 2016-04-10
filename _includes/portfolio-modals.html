@@ -1,6 +1,6 @@
 {% for project in site.projects %}
-	<div class="portfolio-modal modal fade" id="{{project.id}}" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
+	<div class="portfolio-modal modal fade" id="{{project.id}}" tabindex="-1" role="dialog" aria-hidden="true" aria-labelled-by"{{project.id}}-title">
+        <div class="modal-content" role="document">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl">
@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>{{project.title}}</h2>
+                            <h2 id='{{project.id}}-title'>{{project.title}}</h2>
                             <hr class="hr-primary">
                             <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
                             <ul class="list-inline details">
