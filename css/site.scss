@@ -243,14 +243,6 @@ section {
   }
   &.success {
     background: #f0f2f7;
-    a {
-      outline: 0;
-      color: $blue;
-      &:hover, &:focus, &:active, &.active {
-        outline: 0;
-        color: $blue;
-      }
-    }
   }
 }
 
@@ -367,7 +359,6 @@ footer {
     min-height: 100%;
     border: 0;
     border-radius: 0;
-    text-align: center;
     background-clip: border-box;
     box-shadow: none;
     h2 {
@@ -400,8 +391,17 @@ footer {
     .details {
       font-size: 1.25em;
       margin: 30px 0;
-      li strong:after {
-        content: ": ";
+
+      $tagWidth: 100px;
+      dt {
+        text-align: left;
+        width: $tagWidth;
+        &:after {
+          content: ": ";
+        }
+      }
+      dd {
+        margin-left: $tagWidth + 20px;
       }
     }
   }

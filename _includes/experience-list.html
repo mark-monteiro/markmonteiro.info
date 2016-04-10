@@ -13,7 +13,7 @@
                         {% for project_id in experience.projects %}
                             {% for project in site.projects %}
                                 {% if project.id == project_id %}
-                                    <li><a href="#{{project.id}}" data-toggle="modal">{{project.title}}</a></li>
+                                    <li><a href="#{{project.id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
                                 {% endif %}
                             {% endfor %}
                         {% endfor %}
