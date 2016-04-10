@@ -3,6 +3,8 @@
 @import "bourbon/bourbon";
 @import "variables";
 
+// =========== GENERAL STYLING ========= //
+
 html {
   font-size: 15px;
 }
@@ -48,6 +50,14 @@ hr {
   }
 }
 
+.btn {
+  &:focus, &:active, &.active {
+    outline: 0;
+  }
+}
+
+// ========== UTILITY CLASSES ========= //
+
 // Vertical center bootstrap columns
 // Requires removing any whitespace between cols (i.e. with <!-- -->)
 .col-vcenter {
@@ -55,6 +65,41 @@ hr {
   display: inline-block;
   vertical-align: middle;
 }
+
+.btn-outline {
+  margin-top: 15px;
+  border: solid 2px #fff;
+  font-size: 20px;
+  color: #fff;
+  background: 0 0;
+  @include transition(all .3s ease-in-out);
+  &:hover, &:focus, &:active, &.active {
+    border: solid 2px #fff;
+    color: $green;
+    background: #fff;
+  }
+}
+
+.scroll-top {
+  z-index: 1049;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 28px;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+// =========== HEADER =========== //
 
 header {
   text-align: center;
@@ -95,7 +140,7 @@ header {
       li {
         display: inline-block;
         padding: 0;
-        
+
         a {
           color: #FFFFFF;
           &:hover {
@@ -130,6 +175,8 @@ header {
     }
   }
 }
+
+// ============ NAVBAR =========== //
 
 .navbar {
   text-transform: uppercase;
@@ -166,6 +213,8 @@ header {
     }
   }
 }
+
+// ========== PAGE SECTIONS ======= //
 
 section {
   padding: 100px 0;
@@ -287,50 +336,13 @@ section {
   }
 }
 
-.btn-outline {
-  margin-top: 15px;
-  border: solid 2px #fff;
-  font-size: 20px;
-  color: #fff;
-  background: 0 0;
-  @include transition(all .3s ease-in-out);
-  &:hover, &:focus, &:active, &.active {
-    border: solid 2px #fff;
-    color: $green;
-    background: #fff;
-  }
-}
-
 footer {
   color: #fff;
   padding: 25px 0;
   background-color: #233140;
 }
 
-.btn {
-  &:focus, &:active, &.active {
-    outline: 0;
-  }
-}
-
-.scroll-top {
-  z-index: 1049;
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-  width: 50px;
-  height: 50px;
-  .btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    font-size: 20px;
-    line-height: 28px;
-    &:focus {
-      outline: 0;
-    }
-  }
-}
+// ============ PORTFOLIO MODAL =========== //
 
 .portfolio-modal {
   .modal-content {
