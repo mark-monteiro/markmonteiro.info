@@ -11,27 +11,21 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2 id='{{project.id}}-title'>{{project.title}}</h2>
+                            <h2 id='{{project.id}}-title' class='text-center'>{{project.title}}</h2>
                             <hr class="hr-primary">
                             <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
-                            <ul class="list-inline details">
+                            <dl class="details dl-horizontal">
                                 {% if project.website %}
-                                    <li>
-                                        <strong>Website</strong>
-                                        <a href="{{project.website}}" target="_blank">{{project.website}}</a>
-                                    </li>
+                                    <dt>Website</dt>
+                                    <dd><a href="{{project.website}}" target="_blank">{{project.website}}</a></dd>
                                 {% endif %}
                                 {% if project.source %}
-                                    <li>
-                                        <strong>Source</strong>
-                                        <a href="{{project.source}}" target="_blank">{{project.source}}</a>
-                                    </li>
+                                    <dt>Source</dt>
+                                    <dd><a href="{{project.source}}" target="_blank">{{project.source}}</a></dd>
                                 {% endif %}
-                                <li>
-                                    <strong>Developed</strong>
-                                    {{project.developed}}
-                                </li>
-                            </ul>
+                                <dt>Developed</dt>
+                                <dd>{{project.developed}}</dd>
+                            </dl>
                             <div class="modal-text">
                                 {{project.content}}
                             </div>
@@ -40,7 +34,9 @@
                                     <li>{{technology}}</li>
                                 {% endfor %}
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <p class='text-center'>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </p>
                         </div>
                     </div>
                 </div>
