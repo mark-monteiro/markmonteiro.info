@@ -37,6 +37,13 @@
   <link href="/css/site.css" rel="stylesheet">
   <link href="/css/vertical-timeline.css" rel="stylesheet">
 
+  <!-- Page-Specific CSS -->
+  {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="/css/{{ stylesheet }}" media="screen" type="text/css">
+    {% endfor %}
+  {% endif %}
+
   <!-- Custom Fonts -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
