@@ -5,6 +5,7 @@ I hate this. Must fix later.
 {% assign numrows = site.projects.size | divided_by: 3 | floor %}
 
 {% for project in site.projects %}
+	{% assign projectId = project.id | split: '/' | last %}
 	{% assign colnum = forloop.index | minus: 1 | modulo: 3 %}
 	{% assign rownum = forloop.index | minus: 1 | divided_by: 3 | floor %}
 
@@ -16,9 +17,9 @@ I hate this. Must fix later.
 	{% endif %}
 
 	<div class="col-sm-4 col-sm-offset-{{offset}} portfolio-item">
-	    <button type="button" class="btn btn-link portfolio-link" data-toggle="modal" data-target="#{{project.id}}">
+	    <button type="button" class="btn btn-link portfolio-link" data-toggle="modal" data-target="#{{projectId}}">
 	        <div class="caption fa fa-search-plus"></div>
-	        <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
+	        <img src="/img/projects/{{projectId}}.png" class="img-responsive" alt="{{project.title}} Logo">
 	    </button>
 	</div>
 {% endfor %}

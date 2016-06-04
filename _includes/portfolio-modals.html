@@ -1,5 +1,6 @@
 {% for project in site.projects %}
-	<div class="portfolio-modal modal fade" id="{{project.id}}" tabindex="-1" role="dialog" aria-hidden="true" aria-labelled-by="{{project.id}}-title">
+    {% assign projectId = project.id | split: '/' | last %}
+	<div class="portfolio-modal modal fade" id="{{projectId}}" tabindex="-1" role="dialog" aria-hidden="true" aria-labelled-by="{{projectId}}-title">
         <div class="modal-content" role="document">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -11,9 +12,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2 id='{{project.id}}-title' class='text-center'>{{project.title}}</h2>
+                            <h2 id='{{projectId}}-title' class='text-center'>{{project.title}}</h2>
                             <hr class="hr-primary">
-                            <img src="img/portfolio/{{project.id}}.png" class="img-responsive" alt="{{project.title}} Logo">
+                            <img src="img/portfolio/{{projectId}}.png" class="img-responsive" alt="{{project.title}} Logo">
                             <dl class="details dl-horizontal">
                                 {% if project.website %}
                                     <dt>Website</dt>

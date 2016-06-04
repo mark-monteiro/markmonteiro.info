@@ -3,10 +3,10 @@ safe: true
 lsi: false
 source: .
 
-# Github Defaults
-markdown:    kramdown
-highlighter: rouge
-#github: [Repository metadata]
+# Github Defaults (Not modifiable)
+# markdown:    kramdown
+# highlighter: rouge
+# github: [Repository metadata]
 
 exclude:
   - vendor
