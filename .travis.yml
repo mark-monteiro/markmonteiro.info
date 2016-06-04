@@ -4,7 +4,7 @@ rvm:
 
 script:
 - bundle exec jekyll build
-- bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/
+- bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/,/markmonteiro.info\\\z/
 
 env:
   global:
