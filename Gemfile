@@ -8,3 +8,6 @@ gem "github-pages", versions['github-pages'] #includes jekyll
 
 # Travis CI required gems
 gem "html-proofer"
+
+# Dev gems
+gem 'jekyll-compose', group: [:jekyll_plugins]
