@@ -141,6 +141,7 @@ DEPENDENCIES
   github-pages (= 82)
   html-proofer
   jekyll-compose
+  jekyll-seo-tag
   json
 
 BUNDLED WITH

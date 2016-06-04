@@ -2,11 +2,16 @@
 safe: true
 lsi: false
 source: .
-
-# Github Defaults (Not modifiable)
-# markdown:    kramdown
-# highlighter: rouge
+markdown: kramdown
+highlighter: rouge
 # github: [Repository metadata]
+
+# SEO Settings
+title: Mark Monteiro
+description: Mark Monteiro is a software engineer and web developer recently graduated from the University of Waterloo. This is his personal resume website.
+url: markmonteiro.info
+logo: /favicon-194x194.png
+google_analytics_code: UA-7688784-3
 
 exclude:
   - vendor
@@ -22,7 +27,8 @@ sass:
   style: :compressed
 
 # Plugins supported by Github Pages
-#gems:
+gems:
+  - jekyll-seo-tag
 #- jekyll-mentions
 #- jemoji
 #- jekyll-redirect-from
