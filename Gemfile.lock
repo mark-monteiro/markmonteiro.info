@@ -142,6 +142,7 @@ DEPENDENCIES
   html-proofer
   jekyll-compose
   jekyll-seo-tag
+  jekyll-sitemap
   json
 
 BUNDLED WITH
