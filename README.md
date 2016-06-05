@@ -18,7 +18,7 @@ bundle install
 
 ##Serve
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 ## Run Html-Proofer
@@ -41,5 +41,6 @@ If running on Windows you need to install curb with libcurl:
 
 Then, to run html proofer:
 ```
-htmlproofer ./_site
+bundle exec jekyll build
+bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/
 ```
