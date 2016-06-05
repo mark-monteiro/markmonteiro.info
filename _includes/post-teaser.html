@@ -1,0 +1,16 @@
+<div class='post-teaser'>
+    <h2 class='post-title'>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+    {% if post.excerpt %}
+        <div class='excerpt'>
+            {{ post.excerpt }}
+            <p class='read-more'>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    Read More<span class='sr-only'> (Click to open post "{{ post.title }}")</span>
+                </a>
+            </p>
+        </div>
+    {% endif %}
+</div>

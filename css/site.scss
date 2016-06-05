@@ -168,3 +168,30 @@ hr {
   padding: 25px 0;
   background-color: #233140;
 }
+
+// ============== POSTS ========== //
+ul.post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 20px 0;
+    border-top: 1px solid $blue;
+  }
+}
+
+.post-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.post-title {
+  text-transform: none;
+  color: $blue;
+  margin-bottom: 0;
+}
+
+.post-meta {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
