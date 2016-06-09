@@ -10,35 +10,33 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2 id='{{projectId}}-title' class='text-center'>{{project.title}}</h2>
-                            <hr class="hr-primary">
-                            <img src="img/projects/{{projectId}}.png" class="img-responsive" alt="{{project.title}} Logo">
-                            <dl class="details dl-horizontal">
-                                {% if project.website %}
-                                    <dt>Website</dt>
-                                    <dd><a href="{{project.website}}" target="_blank">{{project.website}}</a></dd>
-                                {% endif %}
-                                {% if project.source %}
-                                    <dt>Source</dt>
-                                    <dd><a href="{{project.source}}" target="_blank">{{project.source}}</a></dd>
-                                {% endif %}
-                                <dt>Developed</dt>
-                                <dd>{{project.developed}}</dd>
-                            </dl>
-                            <div class="modal-text">
-                                {{project.content}}
-                            </div>
-                            <ul class="list-inline technologies">
-                                {% for technology in project.technologies %}
-                                    <li>{{technology}}</li>
-                                {% endfor %}
-                            </ul>
-                            <p class='text-center'>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </p>
+                    <div class="modal-body col-lg-8 col-lg-offset-2">
+                        <h2 id='{{projectId}}-title' class='text-center'>{{project.title}}</h2>
+                        <hr class="hr-primary">
+                        <img src="img/projects/{{projectId}}.png" class="img-responsive" alt="{{project.title}} Logo">
+                        <dl class="details dl-horizontal">
+                            {% if project.website %}
+                                <dt>Website</dt>
+                                <dd><a href="{{project.website}}" target="_blank">{{project.website}}</a></dd>
+                            {% endif %}
+                            {% if project.source %}
+                                <dt>Source</dt>
+                                <dd><a href="{{project.source}}" target="_blank">{{project.source}}</a></dd>
+                            {% endif %}
+                            <dt>Developed</dt>
+                            <dd>{{project.developed}}</dd>
+                        </dl>
+                        <div class="modal-text">
+                            {{project.content}}
                         </div>
+                        <ul class="list-inline technologies">
+                            {% for technology in project.technologies %}
+                                <li>{{technology}}</li>
+                            {% endfor %}
+                        </ul>
+                        <p class='text-center'>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </p>
                     </div>
                 </div>
             </div>

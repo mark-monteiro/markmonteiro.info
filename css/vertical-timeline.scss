@@ -1,5 +1,6 @@
 ---
 ---
+@import "variables";
 
 .cd-container {
 	width: 90%;
@@ -70,7 +71,7 @@
 
 	.cd-timeline-point {
 		position: absolute;
-		top: 0;
+		top: 5px;
 		left: 10px;
 		width: 20px;
 		height: 20px;
@@ -126,7 +127,8 @@
 
 	.cd-timeline-content {
 		position: relative;
-		margin-left: 60px;
+		margin-left: 40px;
+		@media (min-width: $screen-sm-min) { margin-left: 60px; }
 		background: white;
 		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
 		border-radius: 0.25em;
@@ -215,7 +217,7 @@
 			margin-left: -2px;
 		}
 	}
-	
+
 	.cd-timeline-label {
 		text-align: center;
 	}
@@ -294,7 +296,7 @@
 			}
 		}
 	}
-	
+
 	.cssanimations {
 		.cd-timeline-block {
 			.hide-timeline {

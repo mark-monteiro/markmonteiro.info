@@ -3,7 +3,18 @@ $blue: #2c3e50;
 $green: #18bc9c;
 
 // Fonts //
+$font-size-base: 15px;
 $montserrat: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 // Fixed Dimensions //
 $header-height: 110px;
+$header-height-sm: 60px;
+
+// Media Query Breakpoints (Bootstrap Defaults) //
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
