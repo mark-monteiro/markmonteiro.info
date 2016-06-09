@@ -11,9 +11,10 @@
                     <strong>Projects</strong>:&nbsp;
                     <ul>
                         {% for project_id in experience.projects %}
+                            {% capture project_id_prefixed %}/projects/{{project_id}}{% endcapture %}
                             {% for project in site.projects %}
-                                {% if project.id == project_id %}
-                                    <li><a href="#{{project.id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
+                                {% if project.id == project_id_prefixed %}
+                                    <li><a href="#{{project_id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
                                 {% endif %}
                             {% endfor %}
                         {% endfor %}
