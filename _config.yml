@@ -13,6 +13,9 @@ url: http://markmonteiro.info
 logo: /favicon-194x194.png
 google_analytics_code: UA-7688784-3
 
+# Custom Settings
+homepage: index.html
+
 exclude:
   - vendor
   - CNAME

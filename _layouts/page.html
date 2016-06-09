@@ -2,10 +2,11 @@
 layout: default
 email_href: mailto:mark.monteiro23@gmail.com?subject=Awesome%20Job%20Offer%20From%20%5Benter%20your%20company%20name%20here%5D
 ---
-{% if page.path == 'index.html' %}
+
+{% if page.path == site.homepage %}
     {% assign navPrefix = '' %}
 {% else %}
-    {% assign navPrefix = '/index' %}
+    {% assign navPrefix = site.homepage | prepend: '/' %}
 {% endif %}
 
 <!-- Navigation -->
