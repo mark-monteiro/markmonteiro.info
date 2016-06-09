@@ -6,7 +6,7 @@
             <h3>{{experience.company}}</h3>
             <span class='cd-timeline-location'>{{experience.location}}</span>
             {{experience.content}}
-            {% if experience.projects %}
+            {% if experience.projects or experience.external_projects %}
                 <div class="projects">
                     <strong>Projects</strong>:&nbsp;
                     <ul>
@@ -17,6 +17,10 @@
                                     <li><a href="#{{project_id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
                                 {% endif %}
                             {% endfor %}
+                        {% endfor %}
+
+                        {% for project in experience.external_projects %}
+                            <li><a href="http://{{project.url}}" target='_blank' title='{{project.name}} Website'>{{project.url}}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
