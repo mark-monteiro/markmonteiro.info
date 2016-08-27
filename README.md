@@ -26,7 +26,7 @@ If running on Windows you need to install curb with libcurl:
 
 1. [Download libcurl](https://curl.haxx.se/download.html)
 2. Extract to `C:/curl` (or wherever)
-3. Run the command below to install the curb gem:
+3. Run the command below to install the curb gem (additional instructions can be found [here](http://blog.cloud-mes.com/2014/08/19/how-to-install-gem-curb-in-windows/)):
 
    ```
    gem install curb -- with-curl-lib="C:/curl/lib64" --with-curl-include="C:/curl/include" --with-curl-dir="C:/curl/"
