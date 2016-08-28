@@ -164,3 +164,5 @@ $(window).on(wheelEvent, function (e) {
 
 ## Credits
 This solution is based on the [Stack Overflow post](http://stackoverflow.com/a/30330303/1988326){:target="_blank"} by [Stefan C](https://stackoverflow.com/users/4672658/stefan-c){:target="_blank"}.
+
+The Javascript code to transition the slides when scrolling is based off of the [scroll-jacking tutorial](http://www.hugeinc.com/ideas/perspective/scroll-jacking-on-hugeinc){:target="_blank"} from [hugeinc.com](http://www.hugeinc.com){:target="_blank"}.
