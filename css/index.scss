@@ -294,7 +294,7 @@ section {
       right: $spacing-lg;
       width: $diameter-lg;
       height: $diameter-lg;
-      .lr, .rl { height: $diameter-lg; }
+      .lr, .lr .rl { height: $diameter-lg; }
       .lr { margin-left: 35px; }
     }
   }
