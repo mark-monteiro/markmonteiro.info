@@ -4,16 +4,15 @@ title: Posts
 ---
 
 <div class='container'>
-    <h1 class="page-heading">Blog</h1>
+    <h1>Blog</h1>
     <p>
-        Welcome to my blog! This is still pretty bare for now but I have lots of ideas for new posts and maybe one day I will actualy write some them. For now you can just take a look at my single, lowly post.
+        Welcome to my blog! This is still pretty bare for now, but I have lots of ideas for articles. Maybe one day I will actualy write some them. For now you can take a look at the few posts I've written below.
     </p>
-
     <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% include post-teaser.html post=post %}
-      </li>
-    {% endfor %}
+        {% for post in site.posts %}
+          <li>
+            {% include post-teaser.html post=post %}
+          </li>
+        {% endfor %}
     </ul>
 </div>

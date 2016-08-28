@@ -168,13 +168,22 @@ hr {
 }
 
 // ============== POSTS ========== //
-ul.post-list {
+.post-list {
   list-style: none;
   padding: 0;
 
   li {
-    margin: 20px 0;
+    margin: 40px 0;
     border-top: 1px solid $blue;
+  }
+
+  .post-title {
+    margin-top: 40px;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $blue;
   }
 }
 
