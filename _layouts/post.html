@@ -4,7 +4,7 @@ layout: page
 
 <div id='post-{{ page.title | slugify }}' class='post-container container'>
     <h1 class='post-title'>{{ page.title }}</h1>
-    <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+    <div class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</div>
 
     {{content}}
 
