@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Block Browser History With Javascript
-comments: true
 ---
 Recently I was working on a site with a unique requirement: no pages on the site should be stored in the user's browser history. This was a site for the [Women & HIV/AIDS Health Initiative (WHAI)](http://www.whai.ca/){:target="_blank"}, where users naturally require privacy while using the site due to the sensitive subject matter of the site.
 

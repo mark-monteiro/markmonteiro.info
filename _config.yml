@@ -16,6 +16,14 @@ google_analytics_code: UA-7688784-3
 # Custom Settings
 homepage: index.html
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+
 exclude:
   - vendor
   - CNAME
