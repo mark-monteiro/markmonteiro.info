@@ -4,14 +4,21 @@
 
 My personal website. Hosted on Github Pages, which uses the Jekyll static website framework.
 
-# Running Locally
+# Development
+The site is developed in a Linux environment (Ubuntu) and has also been tested to work
+when running in Bash on Ubuntu on Windows. All components of the site are cross-platform
+and should build on Windows as well, but this has not been tested.
 
 ## Dependencies
+The following dependencies must be installed to build and run the project locally.
+
 - Ruby
 - Rubygems
 - Bundler
+- Node/NPM
 
-See https://pages.github.com/versions/ for the latest version information used by Github Pages.
+See https://pages.github.com/versions/ for the latest version information of ruby and
+rubygems used by Github Pages.
 
 ## Install
 ```
