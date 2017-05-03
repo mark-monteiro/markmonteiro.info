@@ -53,8 +53,17 @@
 
         a {
           color: #FFFFFF;
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          .fa { line-height: 31px; }
+          margin: 0 5px;
+          border-radius: 50%;
+          border: 2px solid white;
+
           &:hover {
-            // TODO: add hover color
+            color: $green;
+            border-color: $green;
           }
         }
       }

@@ -181,7 +181,8 @@ hr {
     margin-top: 40px;
   }
 
-  a:hover {
+  a:hover,
+  a:active {
     text-decoration: none;
     color: $blue;
   }
