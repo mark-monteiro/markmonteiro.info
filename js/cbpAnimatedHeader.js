@@ -8,7 +8,7 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-window.cbpAnimatedHeader = (function() {
+(function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
