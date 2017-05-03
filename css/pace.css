@@ -35,7 +35,6 @@
   transform: translate3d(0, 0, 0);
 
   max-width: 200px;
-  position: fixed;
   z-index: 2000;
   display: block;
   position: absolute;
