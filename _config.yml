@@ -25,12 +25,14 @@ defaults:
       comments: true
 
 exclude:
+  - node_modules
   - vendor
   - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
+  
 collections:
   - projects
   - experiences
