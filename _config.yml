@@ -26,6 +26,8 @@ defaults:
 
 exclude:
   - node_modules
+  - package.json
+  - gulpfile.js
   - vendor
   - CNAME
   - Gemfile
