@@ -16,31 +16,22 @@ See https://pages.github.com/versions/ for the latest version information used b
 ## Install
 ```
 bundle install
+npm install --dev
 ```
 
 ## Serve
+To build the site and run with a BrowserSync server, just run the following:
+```
+gulp
+```
+
+To use the default server bundled with Jekyll (no BrowserSync), run the following:
 ```
 bundle exec jekyll serve
 ```
 
-## Run BrowserSync
-Among other things, BrowserSync will refresh the browser window every time any source files
-have changes. Installing BrowserSync requires Node.js and NPM installed on the system. To
-install BrowserSync (globally):
-
-```
-npm install -g browser-sync
-```
-
-To start the BrowserSync server, `cd` into the build folder and run the `browser-sync` command:
-
-```
-cd _site
-browser-sync start --server --files ./**
-```
-
 ## Run Html-Proofer
-To run html proofer run the following commands:
+Html-Proofer is run on all builds in TravisCI. To run Html-Proofer locally, use the following commands:
 ```
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/
