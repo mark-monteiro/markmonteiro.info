@@ -9,7 +9,7 @@ My personal website. Hosted on Github Pages, which uses the Jekyll static websit
 ## Dependencies
 - Ruby
 - Rubygems
-- NodeJS
+- Bundler
 
 See https://pages.github.com/versions/ for the latest version information used by Github Pages.
 
@@ -21,6 +21,22 @@ bundle install
 ## Serve
 ```
 bundle exec jekyll serve
+```
+
+## Run BrowserSync
+Among other things, BrowserSync will refresh the browser window every time any source files
+have changes. Installing BrowserSync requires Node.js and NPM installed on the system. To
+install BrowserSync (globally):
+
+```
+npm install -g browser-sync
+```
+
+To start the BrowserSync server, `cd` into the build folder and run the `browser-sync` command:
+
+```
+cd _site
+browser-sync start --server --files ./**
 ```
 
 ## Run Html-Proofer
