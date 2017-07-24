@@ -1,6 +1,15 @@
 {% for experience in site.experiences reversed %}
 	<div class="cd-timeline-block">
-        <div class="cd-timeline-point"></div>
+        <div class="cd-timeline-point">
+            <span class='fa
+            {% case experience.category %}
+              {% when 'work' %}
+                fa-briefcase
+              {% when 'school' %}
+                fa-graduation-cap
+            {% endcase %}
+            '></span>
+        </div>
         <div class="cd-timeline-content">
             <h2>{{experience.title}}</h2>
             <h3>{{experience.company}}</h3>
