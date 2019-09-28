@@ -29,7 +29,6 @@ exclude:
   - package.json
   - gulpfile.js
   - vendor
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
