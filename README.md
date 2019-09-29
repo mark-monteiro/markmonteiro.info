@@ -1,8 +1,9 @@
 # markmonteiro.info
 
-[![Build Status](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io.svg)](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io) [![Code Climate](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io/badges/gpa.svg)](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io)
+[![Build Status](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io.svg)](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io)
+[![Code Climate](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io/badges/gpa.svg)](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io)
 
-My personal website. Hosted on Github Pages, which uses the Jekyll static website framework.
+My personal website. Built with Jekyll, a static website generation framework, and hosted on Netlify.
 
 ## Development
 
@@ -21,23 +22,23 @@ To install the application dependencies run the following commands:
 
 ```bash
 bundle install
-npm install --dev
+npm install --dev # Only required if you want to run with a BrowserSync server
 ```
 
-## Serve
+### Serve
+
 To build the site and run with a BrowserSync server, just run the following:
-```
+
+```bash
 gulp
 ```
 
 To use the default server bundled with Jekyll (no BrowserSync), run the following:
-```
+
+```bash
 bundle exec jekyll serve
 ```
 
-## Run Html-Proofer
-Html-Proofer is run on all builds in TravisCI. To run Html-Proofer locally, use the following commands:
-```
-bundle exec jekyll build
-bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/
-```
+## Testing
+
+Html-Proofer is run on all builds in TravisCI. To run Html-Proofer locally, you can refer to the script defined in `travis-ci.yml`
