@@ -22,5 +22,6 @@ group :jekyll_plugins do
   gem 'jekyll-compose'
 end
 
-# Travis CI required gems
+# Gems required for Rake tasks
 gem "html-proofer"
+gem "rake"

@@ -32,7 +32,7 @@ bundle install
 To run the development server bundled with Jekyll, run the following:
 
 ```bash
-rake serve
+bundle exec rake serve
 ```
 
 ## Testing
@@ -40,5 +40,5 @@ rake serve
 This project is configured to test the generated HTML files using [Html-Proofer](https://github.com/gjtorikian/html-proofer). To run this test, execute the `test` task:
 
 ```bash
-rake test
+bundle exec rake test
 ```

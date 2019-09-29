@@ -6,7 +6,7 @@ cache:
     - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 
 script:
-- rake test
+- bundle exec rake test
 
 env:
   global:
