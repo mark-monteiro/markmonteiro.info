@@ -1,4 +1,9 @@
 language: ruby
+cache:
+  bundler: true
+  directories:
+    # Cache html-proofer results. See: https://github.com/gjtorikian/html-proofer#caching-with-travis
+    - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 
 script:
 - bundle exec jekyll build
@@ -7,8 +12,3 @@ script:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-cache:
-  directories:
-    # Cache html-proofer results. See: https://github.com/gjtorikian/html-proofer#caching-with-travis
-    - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
