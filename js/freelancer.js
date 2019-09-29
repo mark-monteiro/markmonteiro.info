@@ -8,19 +8,20 @@
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500);
+        var $target = $($anchor.attr('href'));
+        var scrollTop = $target.offset().top - $('.navbar-fixed-top .navbar-header').height();
+        $('html, body').stop().animate({ scrollTop: scrollTop }, 1500);
         event.preventDefault();
     });
 });
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
-    target: '.navbar-fixed-top'
+    target: '.navbar-fixed-top',
+    offset: 10 + $('.navbar-fixed-top .navbar-header').height()
 });
 
-// Closes the Responsive Menu on Menu Item Click
+// Close the Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
