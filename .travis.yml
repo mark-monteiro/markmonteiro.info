@@ -2,8 +2,6 @@ language: ruby
 cache:
   bundler: true
   directories:
-    # Cache the ruby version unsed by RVM: https://docs.travis-ci.com/user/caching/#cache-rvm-ruby-version-for-non-ruby-projects
-    - /home/travis/.rvm/
     # Cache html-proofer results. See: https://github.com/gjtorikian/html-proofer#caching-with-travis
     - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 
