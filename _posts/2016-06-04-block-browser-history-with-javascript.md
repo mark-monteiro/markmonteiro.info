@@ -2,7 +2,7 @@
 layout: post
 title: Block Browser History With Javascript
 ---
-Recently I was working on a site with a unique requirement: no pages on the site should be stored in the user's browser history. This was a site for the [Women & HIV/AIDS Health Initiative (WHAI)](http://www.whai.ca/){:target="_blank"}, where users naturally require privacy while using the site due to the sensitive subject matter of the site.
+Recently I was working on a site with a unique requirement: no pages on the site should be stored in the user's browser history. This was a site for the [Women & HIV/AIDS Health Initiative (WHAI)](http://www.whai.ca/), where users naturally require privacy while using the site due to the sensitive subject matter of the site.
 
 Before we go any further, I have to preface this post by saying that implementing behaviour like this is probably a bad idea in most scenarios. Preventing pages from being stored in the browser history this prevents the back button in the browser from working (since there is no history to go back to). Manipulating standard browser behaviour like this is always very confusing for users and may make it appear as if the site is broken. In fact, this funtionality was removed from the WHAI site before it launched once the client saw how confusing it was. That being said, if you have found yourself in a scenario where you **do** want this behaviour (or if you're just interested in how it would work) then read on!
 
