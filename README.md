@@ -17,6 +17,7 @@ The following system dependencies must be installed to build and run the project
   - On Linux, use [rbenv](https://github.com/rbenv/rbenv)
   - On Windows, use [RubyInstaller](https://rubyinstaller.org/)
 - Bundler: After Ruby + Rubygems has been installed, run `gem install bundler -v 1.17.3`
+- Rake: After Ruby + Rubygems has been installed, run `gem install rake`
   
 **NOTE:** Bundler v2.x cannot be used until the [this issue](https://github.com/netlify/build-image/issues/250) has been resolved with Netlify.
 
@@ -31,9 +32,13 @@ bundle install
 To run the development server bundled with Jekyll, run the following:
 
 ```bash
-bundle exec jekyll serve
+bundle exec rake serve
 ```
 
 ## Testing
 
-Html-Proofer is run on all builds in TravisCI. To run Html-Proofer locally, you can refer to the script defined in `travis-ci.yml`
+This project is configured to test the generated HTML files using [Html-Proofer](https://github.com/gjtorikian/html-proofer). To run this test, execute the `test` task:
+
+```bash
+bundle exec rake test
+```
