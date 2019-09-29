@@ -13,27 +13,22 @@ The site can be developed in either Linux, Windows, or using the Linux Subsystem
 
 The following system dependencies must be installed to build and run the project locally.
 
-- Ruby + Rubygems + Bundler. The version of Ruby that should be used is noted in the `.ruby-version` file.
+- Ruby + Rubygems. The version of Ruby that should be used is noted in the `.ruby-version` file.
   - On Linux, use [rbenv](https://github.com/rbenv/rbenv)
   - On Windows, use [RubyInstaller](https://rubyinstaller.org/)
-- Node/NPM
+- Bundler: After Ruby + Rubygems has been installed, run `gem install bundler -v 1.17.3`
+  
+**NOTE:** Bundler v2.x cannot be used until the [this issue](https://github.com/netlify/build-image/issues/250) has been resolved with Netlify.
 
-To install the application dependencies run the following commands:
+Once the above dependencies have been installed, add the application dependencies by runing the following:
 
 ```bash
 bundle install
-npm install --dev # Only required if you want to run with a BrowserSync server
 ```
 
 ### Serve
 
-To build the site and run with a BrowserSync server, just run the following:
-
-```bash
-gulp
-```
-
-To use the default server bundled with Jekyll (no BrowserSync), run the following:
+To run the development server bundled with Jekyll, run the following:
 
 ```bash
 bundle exec jekyll serve
