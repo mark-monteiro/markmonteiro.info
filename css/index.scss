@@ -71,7 +71,9 @@
   }
 
   @media (min-width: 768px) {
-    background-image: url('../img/header-blur.jpg');
+    background-image: 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../img/header-blur.jpg');
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
