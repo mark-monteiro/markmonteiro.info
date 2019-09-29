@@ -6,8 +6,7 @@ cache:
     - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 
 script:
-- bundle exec jekyll build
-- bundle exec htmlproofer ./_site --check-favicon --check-html --url-ignore /linkedin\.com*/,/codepen\.io*/
+- rake test
 
 env:
   global:
