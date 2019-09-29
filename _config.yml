@@ -29,6 +29,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - Rakefile
   
 collections:
   - projects
