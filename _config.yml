@@ -25,10 +25,6 @@ defaults:
       comments: true
 
 exclude:
-  - node_modules
-  - package.json
-  - gulpfile.js
-  - vendor
   - Gemfile
   - Gemfile.lock
   - LICENSE
