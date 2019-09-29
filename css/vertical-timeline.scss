@@ -176,9 +176,6 @@
             border-radius: 0.25em;
         }
         .cd-date {
-            font-size: 13px;
-            font-size: 0.8125rem;
-            font-size: 14px;
             font-size: 0.875rem;
             padding: .2em 0;
             opacity: .7;
@@ -325,8 +322,9 @@ html.cssanimations {
                 width: 100%;
                 left: 122%;
                 top: 12px;
-                font-size: 16px;
                 font-size: 1rem;
+                color: #003765;
+                font-weight: bold;
             }
             &::before {
                 left: 100%;
