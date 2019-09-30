@@ -29,11 +29,17 @@
                         <div class="modal-text">
                             {{project.content}}
                         </div>
-                        <ul class="list-inline technologies">
-                            {% for technology in project.technologies %}
-                                <li>{{technology}}</li>
-                            {% endfor %}
-                        </ul>
+                        {% if project.stackshareId %}
+                            <h3>Technology Stack</h3>
+                            <div class='stackshare-embed' data-embed-code='{{project.stackshareId}}'></div>
+                        {% endif %}
+                        {% if project.technologies and project.technologies.size > 0 %}
+                            <ul class="list-inline technologies">
+                                {% for technology in project.technologies %}
+                                    <li>{{technology}}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                         <p class='text-center'>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">
                                 <span class="fa fa-tspanmes"></span>
