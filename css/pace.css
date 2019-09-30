@@ -50,19 +50,16 @@
   display: none;
 }
 
-/* hide page until load finishes */
-body > :not(.pace),
-body:before,
-body:after {
-  -webkit-transition:opacity .4s ease-in-out;
-  -moz-transition:opacity .4s ease-in-out;
-  -o-transition:opacity .4s ease-in-out;
-  -ms-transition:opacity .4s ease-in-out;
-  transition:opacity .4s ease-in-out
-}
-
+/* Hide page until it is done loading */
 body:not(.pace-done) > :not(.pace),
 body:not(.pace-done):before,
 body:not(.pace-done):after {
   opacity:0
+}
+
+/* Add opacity transition when page is done loading */
+body.pace-done > :not(.pace),
+body.pace-done:before,
+body.pace-done:after {
+  transition:opacity .4s ease-in-out
 }

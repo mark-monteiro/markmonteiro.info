@@ -39,16 +39,16 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-  <link href="//cdn.jsdelivr.net/bootswatch/3.3.2/flatly/bootstrap.min.css" rel="stylesheet">
+  <link async href="//cdn.jsdelivr.net/bootswatch/3.3.2/flatly/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="/css/site.css" rel="stylesheet">
-  <link href="/css/vertical-timeline.css" rel="stylesheet">
+  <link async href="/css/site.css" rel="stylesheet">
+  <link async href="/css/vertical-timeline.css" rel="stylesheet">
 
   <!-- Page-Specific CSS -->
   {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="/css/{{ stylesheet }}" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/{{ stylesheet }}" type="text/css">
     {% endfor %}
   {% endif %}
 
