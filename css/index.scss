@@ -52,18 +52,20 @@
         padding: 0;
 
         a {
-          color: #FFFFFF;
+          color: white;
           display: inline-block;
           width: 35px;
           height: 35px;
-          .fa { line-height: 31px; }
           margin: 0 5px;
           border-radius: 50%;
           border: 2px solid white;
+          transition: all 0.25s;
+
+          .fa { line-height: 31px; }
 
           &:hover {
             color: $green;
-            border-color: $green;
+            background-color: white;
           }
         }
       }
