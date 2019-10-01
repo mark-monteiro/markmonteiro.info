@@ -1,0 +1,21 @@
+{
+  "name": "mark-monteiro.github.io",
+  "version": "1.0.0",
+  "description": "Mark Monteiro's personal website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-monteiro/mark-monteiro.github.io.git"
+  },
+  "author": "Mark Monteiro",
+  "license": "SEE LICENSE IN LICENSE.",
+  "bugs": {
+    "url": "https://github.com/mark-monteiro/mark-monteiro.github.io/issues"
+  },
+  "homepage": "https://github.com/mark-monteiro/mark-monteiro.github.io#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.4.1"
+  }
+}
