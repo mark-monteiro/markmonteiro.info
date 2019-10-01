@@ -1,0 +1,4 @@
+#page-content {
+  margin-top: $header-height;
+  @media (max-width: $screen-sm-max) { margin-top: $header-height-sm; }
+}
