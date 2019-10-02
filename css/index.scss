@@ -1,6 +1,5 @@
 ---
 ---
-@import "bourbon/bourbon";
 @import "variables";
 @import "mixins";
 
@@ -192,7 +191,7 @@ section {
         height: 100%;
         background: rgba(24, 188, 156, 0.9);
         opacity: 0;
-        @include transition(opacity .5s);
+        transition: opacity .5s;
 
         &:hover {
           opacity: 1;
@@ -290,13 +289,13 @@ section {
       height: $diameter;
       margin-left: 25px;
       background-color: $blue;
-      @include transform(rotate(45deg));
+      transform: rotate(45deg);
       .rl {
         z-index: 1052;
         width: 1px;
         height: $diameter;
         background-color: $blue;
-        @include transform(rotate(90deg))
+        transform: rotate(90deg)
       }
     }
 
