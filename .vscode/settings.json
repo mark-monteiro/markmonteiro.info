@@ -1,0 +1,15 @@
+{
+    
+    // Style validation will be done by stylelint, disable built-in linters
+    "css.validate": false,
+    "less.validate": false, 
+    "scss.validate": false,
+    
+    // Use a smaller tab size for CSS and SCSS
+    "[scss]": {
+        "editor.tabSize": 2,
+    },
+    "[css]": {
+        "editor.tabSize": 2,
+    }
+}

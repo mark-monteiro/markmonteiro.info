@@ -1,0 +1,485 @@
+.cd-container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 0 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  header {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background: $dark-blue;
+    h1 {
+      color: white;
+      font-size: 18px;
+      font-size: 1.125rem;
+    }
+  }
+  
+  &::before {
+    // this is the vertical line
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed;
+  }
+  
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.cd-timeline-label {
+  position: relative;
+  margin: 2em 0;
+  margin-top: 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-point {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid #d7e4ed;
+  .fa { display: none; }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+  text-align: center;
+  vertical-align: middle;
+  .fa {
+    font-size: 25px;
+    line-height: inherit;
+  }
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+  }
+  &.cd-picture {
+    background: #75ce66;
+  }
+  &.cd-movie {
+    background: #c03b44;
+  }
+  &.cd-location {
+    background: #f0ca45;
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 40px;
+  @media (min-width: $screen-sm-min) { margin-left: 60px; }
+  background: white;
+  border-radius: 0.25em;
+  padding: 1em;
+  box-shadow: 0 3px 0 #d7e4ed;
+  
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+    
+    .cd-timeline-point ~ & { top: 8px; }
+    .cd-timeline-img ~ & { top: 16px; }
+  }
+  
+  h2 {
+    margin: 0;
+    color: $dark-blue;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  h3 {
+    margin: 0;
+    color: $dark-blue;
+    font-size: 17px;
+    font-size: 1.1rem;
+  }
+  p {
+    margin: 1em 0;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  .cd-read-more {
+    display: inline-block;
+    font-size: 0.875rem;
+    float: right;
+    padding: .8em 1em;
+    background: #acb7c0;
+    color: white;
+    border-radius: 0.25em;
+  }
+  .cd-date {
+    font-size: 0.875rem;
+    padding: .2em 0;
+    opacity: .7;
+  }
+  .cd-timeline-location {
+    margin-top: 0;
+  }
+}
+
+// Use Modernizr to check for animation support //
+html.cssanimations {
+  .cd-timeline-block {
+    .hide-timeline {
+      visibility: hidden;
+    }
+    .cd-timeline-img.bounce-in {
+      visibility: visible;
+      -webkit-animation: cd-bounce-1 0.6s;
+      -moz-animation: cd-bounce-1 0.6s;
+      animation: cd-bounce-1 0.6s;
+    }
+    .cd-timeline-point.bounce-in {
+      visibility: visible;
+      -webkit-animation: cd-bounce-1 0.6s;
+      -moz-animation: cd-bounce-1 0.6s;
+      animation: cd-bounce-1 0.6s;
+    }
+    .cd-timeline-content.bounce-in {
+      visibility: visible;
+      -webkit-animation: cd-bounce-2-inverse 0.6s;
+      -moz-animation: cd-bounce-2-inverse 0.6s;
+      animation: cd-bounce-2-inverse 0.6s;
+    }
+    @media only screen and(min-width: 1170px) {
+      &:nth-child(odd) .cd-timeline-content.bounce-in {
+        -webkit-animation: cd-bounce-2 0.6s;
+        -moz-animation: cd-bounce-2 0.6s;
+        animation: cd-bounce-2 0.6s;
+      }
+    }
+  }
+}
+
+@media only screen and(min-width: 1170px) {
+  .cd-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    header {
+      height: 300px;
+      line-height: 300px;
+      h1 {
+        font-size: 24px;
+        font-size: 1.5rem;
+      }
+    }
+    
+    &::before {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+  
+  .cd-timeline-label {
+    text-align: center;
+  }
+  
+  .cd-timeline-block {
+    margin: 4em 0;
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+  }
+  
+  .cd-timeline-point {
+    $diameter: 40px;
+    width: $diameter;
+    height: $diameter;
+    left: 50%;
+    margin-left: -$diameter/2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    
+    .fa {
+      display: inline-block;
+      line-height: $diameter - 7px;
+    }
+  }
+  
+  .cd-timeline-img {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+    .cd-read-more {
+      float: left;
+    }
+    .cd-date {
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 12px;
+      font-size: 1rem;
+      color: #003765;
+      font-weight: bold;
+    }
+    
+    &::before {
+      left: 100%;
+      border-color: transparent;
+      border-left-color: white;
+      
+      .cd-timeline-point ~ & { top: 19px; }
+      .cd-timeline-img ~ & { top: 24px; }
+    }
+    
+    .cd-timeline-block:nth-child(even) & {
+      float: right;
+      .cd-read-more {
+        float: right;
+      }
+      .cd-date {
+        left: auto;
+        right: 122%;
+        text-align: right;
+      }
+      
+      &::before {
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: white;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(0);
+  }
+}
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;
+}

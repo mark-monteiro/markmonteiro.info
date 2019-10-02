@@ -1,6 +1,7 @@
 require 'html-proofer'
 
 task :build do
+    system "npm ci"
     system "bundle exec jekyll build"
 end
 
@@ -13,6 +14,7 @@ task test: [:build] do
         :url_ignore => [/linkedin.com/, /codepen.io/]
     }
     HTMLProofer.check_directory("./_site", options).run
+    system "npx stylelint _sass/**/*.scss"
 end
 
 task :serve do

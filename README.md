@@ -13,7 +13,10 @@ The site can be developed in either Linux, Windows, or using the Linux Subsystem
 
 The following system dependencies must be installed to build and run the project locally.
 
-- Ruby + Rubygems. The version of Ruby that should be used is noted in the `.ruby-version` file.
+- Node + NPM. The version that should be used is noted in the `.nvcrc` file. A node version manager may be helpful when working on a development machine with multiple projects:
+  - On Linux, use [nvm](https://github.com/nvm-sh/nvm)
+  - On Windows, use [nvm-windows](https://github.com/coreybutler/nvm-windows)
+- Ruby + Rubygems. The version of Ruby that should be used is noted in the `.ruby-version` file. A ruby version manager may be helpful when working on a development machine with multiple projects:
   - On Linux, use [rbenv](https://github.com/rbenv/rbenv)
   - On Windows, use [RubyInstaller](https://rubyinstaller.org/)
 - Bundler: After Ruby + Rubygems has been installed, run `gem install bundler -v 1.17.3`
@@ -21,9 +24,10 @@ The following system dependencies must be installed to build and run the project
   
 **NOTE:** Bundler v2.x cannot be used until the [this issue](https://github.com/netlify/build-image/issues/250) has been resolved with Netlify.
 
-Once the above dependencies have been installed, add the application dependencies by runing the following:
+Once the above dependencies have been installed, add the application dependencies by runing the following commands:
 
 ```bash
+npm ci
 bundle install
 ```
 

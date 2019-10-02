@@ -1,205 +1,42 @@
 ---
 ---
-@import "bourbon/bourbon";
-@import "variables";
-@import "mixins";
-@import "syntax";
+@charset 'UTF-8';
 
-// =========== GENERAL STYLING ========= //
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-html {
-  font-size: 15px;
-}
+// 2. Vendors
+@import
+  'vendors/bootswatch-flatly-variables',
+  'vendors/bootstrap',
+  'vendors/bootswatch-flatly',
+  'vendors/syntax';
 
-body {
-  overflow-x: hidden;
-}
+// 3. Base stuff
+@import
+  'base/base',
+  'base/typography',
+  'base/helpers';
 
-p, p + ul {
-  font-size: 1.25em;
-}
+// 4. Layout-related sections
+@import
+  'layout/page',
+  'layout/footer';
 
-a {
-  outline: 0;
-  color: $green;
+// 5. Components
+@import
+  'components/navbar',
+  'components/portfolio-modal',
+  'components/post-list',
+  'components/vertical-timeline';
 
-  &:hover, &:focus, &:active, &.active {
-    outline: 0;
-    color: $green;
-  }
-}
+// 6. Page-specific styles
+@import
+  'pages/index';
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  font-family: $montserrat;
-  font-weight: 700;
-}
-
-hr {
-  &.hr-light, &.hr-primary {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 100px;
-    border: 0;
-    border-top: solid 2px;
-    text-align: center;
-  }
-  &.hr-light {
-    border-color: #fff;
-  }
-  &.hr-primary {
-    border-color: $blue;
-  }
-}
-
-.btn {
-  &:focus, &:active, &.active {
-    outline: 0;
-  }
-}
-
-// ========== PAGE LAYOUT ========= //
-#page-content {
-  margin-top: $header-height;
-  @media (max-width: $screen-sm-max) { margin-top: $header-height-sm; }
-}
-
-// ========== UTILITY CLASSES ========= //
-
-.btn-outline {
-  margin-top: 15px;
-  border: solid 2px #fff;
-  font-size: 20px;
-  color: #fff;
-  background: 0 0;
-  @include transition(all .3s ease-in-out);
-  &:hover, &:focus, &:active, &.active {
-    border: solid 2px #fff;
-    color: $green;
-    background: #fff;
-  }
-}
-
-.scroll-top {
-  z-index: 1049;
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-
-  .btn {
-    $diameter: 50px;
-    width: $diameter;
-    height: $diameter;
-    text-align: center;
-    border-radius: 50%;
-    padding: 0;
-    font-size: 20px;
-
-    .fa {line-height: $diameter - 5px; }
-
-    &:hover, &:focus {
-      outline: 0;
-    }
-  }
-}
-
-// Centering things (with reduced browser support)
-// Requires a relatively positioned parent
-.vertical-center {
-  position: absolute;
-  top: 50%;
-  @include transform(translateY(-50%));
-}
-.horizontal-center {
-  position: absolute;
-  left: 50%;
-  @include transform(translateX(-50%));
-}
-.absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  @include transform(translate(-50%, -50%));
-}
-
-// ============ NAVBAR =========== //
-
-.navbar {
-  text-transform: uppercase;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  a:focus {
-    outline: 0;
-  }
-  .navbar-nav {
-    letter-spacing: 1px;
-    li a:focus {
-      outline: 0;
-    }
-  }
-}
-
-.navbar-default, .navbar-inverse {
-  border: 0;
-}
-
-@media (min-width: 768px) {
-  .navbar-fixed-top {
-    padding: 25px 0;
-    @include transition(all .3s);
-    .navbar-brand {
-      font-size: 2em;
-      @include transition(all .3s);
-    }
-    &.navbar-shrink {
-      padding: 10px 0;
-      .navbar-brand {
-        font-size: 1.5em;
-      }
-    }
-  }
-}
-
-// =========== FOOTER =========== //
-#page-footer {
-  color: #fff;
-  padding: 25px 0;
-  background-color: #233140;
-}
-
-// ============== POSTS ========== //
-.post-list {
-  list-style: none;
-  padding: 0;
-
-  li {
-    margin: 40px 0;
-    border-top: 1px solid $blue;
-  }
-
-  .post-title {
-    margin-top: 40px;
-  }
-
-  a:hover,
-  a:active {
-    text-decoration: none;
-    color: $blue;
-  }
-}
-
-.post-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.post-title {
-  text-transform: none;
-  color: $blue;
-  margin-bottom: 0;
-}
-
-.post-meta {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
+// 7. Themes
+// @import
+//   'themes/default';

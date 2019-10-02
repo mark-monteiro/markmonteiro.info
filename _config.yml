@@ -34,9 +34,11 @@ exclude:
 collections:
   - projects
   - experiences
+
 sass:
   style: :compressed
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-autoprefixer

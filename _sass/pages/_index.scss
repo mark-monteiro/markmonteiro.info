@@ -1,0 +1,195 @@
+// =========== HEADER (Banner Image) =========== //
+
+.page-banner {
+  margin-top: -$header-height;
+  text-align: center;
+  color: #fff;
+  background: $green;
+
+  .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 25%;
+  }
+
+  .intro-text {
+    .name {
+      display: block;
+      text-transform: uppercase;
+      font-family: $montserrat;
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    .skills {
+      font-size: 1.25em;
+      font-weight: 300;
+    }
+
+    .social {
+      padding: 0;
+      margin: 1em 0;
+      list-style: none;
+      font-size: 1.2em;
+
+      li {
+        display: inline-block;
+        padding: 0;
+
+        a {
+          color: white;
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          margin: 0 5px;
+          border-radius: 50%;
+          border: 2px solid white;
+          transition: all 0.25s;
+
+          .fa { line-height: 31px; }
+
+          &:hover {
+            color: $green;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    background-image: 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../img/header-blur.jpg');
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .container {
+      padding-top: 200px;
+      padding-bottom: 100px;
+    }
+
+    .intro-text {
+      .name {
+        font-size: 4.75em;
+      }
+
+      .skills {
+        font-size: 1.75em;
+      }
+    }
+  }
+}
+
+// =========== ABOUT SECTION =========== //
+
+#about {
+  img.portrait {
+    margin: 0 auto;
+    width: 75%;
+    max-width: 300px;
+    @media (min-width: $screen-lg-min) {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  .info-container {
+    margin-top: 3em;
+  }
+
+  .info {
+    padding: 10px;
+
+    dl {
+      @include dl-horizontal-sm(100px);
+      margin: 15px auto;
+      width: 350px;
+      dd { margin-bottom: 5px; }
+    }
+
+    .fa-download {
+      margin-right: 5px;
+    }
+  }
+}
+
+// =========== RESUME SECTION =========== //
+
+#resume {
+  .projects ul, .technologies ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &:after {
+        content: ", ";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}
+
+// =========== PORTFOLIO SECTION =========== //
+
+#portfolio {
+  .portfolio-item {
+    right: 0;
+    margin-bottom: 15px;
+    .portfolio-link {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      max-width: 400px;
+      padding: 0;
+
+      .caption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(24, 188, 156, 0.9);
+        opacity: 0;
+        transition: opacity .5s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:before {
+          font-family: FontAwesome; // stylelint-disable-line font-family-no-missing-generic-family-keyword
+          content: "\f00e"; // fa-search-plus
+          display: inline-block;
+          @include absolute-center();
+          color: white;
+          font-size: 3em;
+        }
+      }
+    }
+  }
+  * {
+    z-index: 2;
+  }
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin-bottom: 30px;
+  }
+}

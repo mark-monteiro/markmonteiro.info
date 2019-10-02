@@ -1,0 +1,35 @@
+.post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 40px 0;
+    border-top: 1px solid $blue;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+.post-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.post-title {
+  text-transform: none;
+  color: $blue;
+  margin-bottom: 0;
+
+  .post-list & {
+    margin-top: 40px;
+  }
+}
+
+.post-meta {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}

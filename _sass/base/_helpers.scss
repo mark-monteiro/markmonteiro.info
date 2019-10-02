@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.btn-outline {
+  margin-top: 15px;
+  border: solid 2px #fff;
+  font-size: 20px;
+  color: #fff;
+  background: 0 0;
+  transition: all .3s ease-in-out;
+  &:hover, &:focus, &:active, &.active {
+    border: solid 2px #fff;
+    color: $green;
+    background: #fff;
+  }
+}
+
+.scroll-top {
+  z-index: 1049;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+
+  .btn {
+    $diameter: 50px;
+    width: $diameter;
+    height: $diameter;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 20px;
+
+    .fa {line-height: $diameter - 5px; }
+
+    &:hover, &:focus {
+      outline: 0;
+    }
+  }
+}
+
+// Centering things (with reduced browser support)
+// Requires a relatively positioned parent
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
