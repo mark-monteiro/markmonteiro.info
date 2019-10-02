@@ -14,6 +14,7 @@ task test: [:build] do
         :url_ignore => [/linkedin.com/, /codepen.io/]
     }
     HTMLProofer.check_directory("./_site", options).run
+    system "npm run stylelint"
 end
 
 task :serve do
