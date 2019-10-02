@@ -4,6 +4,8 @@ cache:
   directories:
     # Cache html-proofer results. See: https://github.com/gjtorikian/html-proofer#caching-with-travis
     - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+    # Cache NPM dependencies. See: https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#caching-with-npm
+    - $HOME/.npm
 
 script:
 - bundle exec rake test
