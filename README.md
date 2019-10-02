@@ -24,9 +24,10 @@ The following system dependencies must be installed to build and run the project
   
 **NOTE:** Bundler v2.x cannot be used until the [this issue](https://github.com/netlify/build-image/issues/250) has been resolved with Netlify.
 
-Once the above dependencies have been installed, add the application dependencies by runing the following:
+Once the above dependencies have been installed, add the application dependencies by runing the following commands:
 
 ```bash
+npm ci
 bundle install
 ```
 

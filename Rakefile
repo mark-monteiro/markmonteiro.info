@@ -1,7 +1,7 @@
 require 'html-proofer'
 
 task :build do
-    system "npm install"
+    system "npm ci"
     system "bundle exec jekyll build"
 end
 
