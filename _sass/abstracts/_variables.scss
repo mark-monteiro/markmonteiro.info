@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
 // Colors //
 $blue: #2c3e50;
 $dark-blue: #303e49;
@@ -19,3 +23,9 @@ $screen-lg-min: 1200px;
 $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/' !default;

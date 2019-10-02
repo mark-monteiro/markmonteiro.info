@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html {
+  font-size: 15px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p, p + ul {
+  font-size: 1.25em;
+}
+
+a {
+  outline: 0;
+  color: $green;
+
+  &:hover, &:focus, &:active, &.active {
+    outline: 0;
+    color: $green;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: $montserrat;
+  font-weight: 700;
+}
+
+hr {
+  &.hr-light, &.hr-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 100px;
+    border: 0;
+    border-top: solid 2px;
+    text-align: center;
+  }
+  &.hr-light {
+    border-color: #fff;
+  }
+  &.hr-primary {
+    border-color: $blue;
+  }
+}
+
+.btn {
+  &:focus, &:active, &.active {
+    outline: 0;
+  }
+}
