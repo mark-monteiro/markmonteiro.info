@@ -8,6 +8,7 @@ cache:
     - $HOME/.npm
 
 script:
+- nvm use
 - bundle exec rake test
 
 env:
