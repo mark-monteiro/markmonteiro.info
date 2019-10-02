@@ -7,10 +7,6 @@
     border-top: 1px solid $blue;
   }
 
-  .post-title {
-    margin-top: 40px;
-  }
-
   a:hover,
   a:active {
     text-decoration: none;
@@ -27,6 +23,10 @@
   text-transform: none;
   color: $blue;
   margin-bottom: 0;
+
+  .post-list & {
+    margin-top: 40px;
+  }
 }
 
 .post-meta {

@@ -173,7 +173,7 @@
         }
 
         &:before {
-          font-family: FontAwesome;
+          font-family: FontAwesome; // stylelint-disable-line font-family-no-missing-generic-family-keyword
           content: "\f00e"; // fa-search-plus
           display: inline-block;
           @include absolute-center();
