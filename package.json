@@ -16,6 +16,9 @@
   },
   "homepage": "https://github.com/mark-monteiro/mark-monteiro.github.io#readme",
   "devDependencies": {
-    "bootstrap-sass": "^3.4.1"
+    "bootstrap-sass": "^3.4.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-scss": "^3.11.1"
   }
 }
