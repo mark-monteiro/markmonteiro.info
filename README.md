@@ -18,7 +18,8 @@ The following system dependencies must be installed to build and run the project
 locally.
 
 - Node + NPM. The version that should be used is noted in the `.nvcrc` file. A
-  node version manager may be helpful when working on a development machine with multiple projects:
+  node version manager may be helpful when working on a development machine with
+  multiple projects:
   - On Linux, use [nvm](https://github.com/nvm-sh/nvm)
   - On Windows, use [nvm-windows](https://github.com/coreybutler/nvm-windows)
 - Ruby + Rubygems. The version of Ruby that should be used is noted in the
