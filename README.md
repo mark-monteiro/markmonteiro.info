@@ -1,7 +1,7 @@
 # markmonteiro.info
 
-[![Build Status](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io.svg)](https://travis-ci.org/mark-monteiro/mark-monteiro.github.io)
-[![Code Climate](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io/badges/gpa.svg)](https://codeclimate.com/github/mark-monteiro/mark-monteiro.github.io)
+[![Build Status](https://travis-ci.org/mark-monteiro/markmonteiro.info.svg)](https://travis-ci.org/mark-monteiro/markmonteiro.info)
+[![Code Climate](https://codeclimate.com/github/mark-monteiro/markmonteiro.info/badges/gpa.svg)](https://codeclimate.com/github/mark-monteiro/markmonteiro.info)
 
 My personal website. Built with Jekyll, a static website generation framework, and hosted on Netlify.
 
