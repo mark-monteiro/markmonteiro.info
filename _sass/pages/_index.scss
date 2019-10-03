@@ -4,7 +4,12 @@
   margin-top: -$header-height;
   text-align: center;
   color: #fff;
-  background: $green;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../img/header.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   .container {
     padding-top: 100px;
@@ -63,13 +68,6 @@
   }
 
   @media (min-width: 768px) {
-    background-image: 
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url('../img/header-blur.jpg');
-    background-size: 100% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-
     .container {
       padding-top: 200px;
       padding-bottom: 100px;
