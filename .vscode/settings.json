@@ -11,5 +11,8 @@
     },
     "[css]": {
         "editor.tabSize": 2,
+    },
+    "[markdown]": {
+        "editor.rulers": [80]
     }
 }

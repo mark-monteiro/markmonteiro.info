@@ -3,11 +3,18 @@ layout: post
 title: Vertical Bootstrap Carousel (CSS Only)
 ---
 
-Like using Bootstrap's carousel component but want it to scroll vertically instead of horizontal? This functionality can be implemented using only CSS...no Javascript required!
+Like using Bootstrap's carousel component but want it to scroll vertically
+instead of horizontal? This functionality can be implemented using only CSS...no
+Javascript required!
 
-Bootstrap Carousel performs transitions between slides with only CSS using absolute positioning and the `translate3d` transform property. We can switch this transition from horizontal to vertical by updating the position to transition on `top` instead of `left`, and updating the `translate3d` to transition on the Y-axis instead of X-axis.
+Bootstrap Carousel performs transitions between slides with only CSS using
+absolute positioning and the `translate3d` transform property. We can switch
+this transition from horizontal to vertical by updating the position to
+transition on `top` instead of `left`, and updating the `translate3d` to
+transition on the Y-axis instead of X-axis.
 
-The CSS below contains everything you need to create a vertical carousel. Just add the `vertical` class to the carousel element.
+The CSS below contains everything you need to create a vertical carousel. Just
+add the `vertical` class to the carousel element.
 
 ``` css
 .carousel.vertical .carousel-inner {
@@ -85,7 +92,8 @@ The CSS below contains everything you need to create a vertical carousel. Just a
 }
 ```
 
-It may be valuable to also lay out the carousel indicators vertically to match the new tranition. You can do this with the following CSS.
+It may be valuable to also lay out the carousel indicators vertically to match
+the new tranition. You can do this with the following CSS.
 
 ``` css
 .carousel.vertical .carousel-indicators {
@@ -104,7 +112,11 @@ It may be valuable to also lay out the carousel indicators vertically to match t
 }
 ```
 
-As a nice final touch, you may want to enable the user to use the scroll wheel to change slides. Now that the slides transition vertically, this will be a natural interaction with the element. The code below monitors scroll events and adjusts the current slide as necessary. This code also supports slides with scrolling content.
+As a nice final touch, you may want to enable the user to use the scroll wheel
+to change slides. Now that the slides transition vertically, this will be a
+natural interaction with the element. The code below monitors scroll events and
+adjusts the current slide as necessary. This code also supports slides with
+scrolling content.
 
 ``` javascript
 var delta = 0;
@@ -163,6 +175,11 @@ $(window).on(wheelEvent, function (e) {
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Credits
-This solution is based on the [Stack Overflow post](http://stackoverflow.com/a/30330303/1988326) by [Stefan C](https://stackoverflow.com/users/4672658/stefan-c).
 
-The Javascript code to transition the slides when scrolling is based off of the [scroll-jacking tutorial](http://www.hugeinc.com/ideas/perspective/scroll-jacking-on-hugeinc) from [hugeinc.com](http://www.hugeinc.com).
+This solution is based on the
+[Stack Overflow post](http://stackoverflow.com/a/30330303/1988326) by
+[Stefan C](https://stackoverflow.com/users/4672658/stefan-c).
+
+The Javascript code to transition the slides when scrolling is based off of the
+[scroll-jacking tutorial](http://www.hugeinc.com/ideas/perspective/scroll-jacking-on-hugeinc)
+from [hugeinc.com](http://www.hugeinc.com).
