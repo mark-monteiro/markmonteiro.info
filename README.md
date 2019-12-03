@@ -17,7 +17,7 @@ running locally in any of these environments.
 The following system dependencies must be installed to build and run the project
 locally.
 
-- Node + NPM. The version that should be used is noted in the `.nvcrc` file. A
+- Node + NPM. The version that should be used is noted in the `.nvmrc` file. A
   node version manager may be helpful when working on a development machine with
   multiple projects:
   - On Linux, use [nvm](https://github.com/nvm-sh/nvm)
@@ -27,16 +27,11 @@ locally.
   development machine with multiple projects:
   - On Linux, use [rbenv](https://github.com/rbenv/rbenv)
   - On Windows, use [RubyInstaller](https://rubyinstaller.org/)
-- Bundler: After Ruby + Rubygems has been installed, run
-  `gem install bundler -v 1.17.3`
+- Bundler: After Ruby + Rubygems has been installed, run `gem install bundler`
 - Rake: After Ruby + Rubygems has been installed, run `gem install rake`
 
-**NOTE:** Bundler v2.x cannot be used until the
-[this issue](https://github.com/netlify/build-image/issues/250) has been
-resolved with Netlify.
-
 Once the above dependencies have been installed, add the application
-dependencies by runing the following commands:
+dependencies by running the following commands:
 
 ```bash
 npm ci
