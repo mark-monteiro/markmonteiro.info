@@ -51,6 +51,11 @@ To run the development server bundled with Jekyll, run the following:
 bundle exec rake serve
 ```
 
+### VS Code Extensions
+
+See [.vscode/extensions.json](.vscode/extensions.json) for a list of VS Code
+extensions that are supported/recommended to be used during development.
+
 ## Testing
 
 This project is configured to test the generated HTML files using
