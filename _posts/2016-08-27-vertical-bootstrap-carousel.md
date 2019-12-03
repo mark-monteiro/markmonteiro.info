@@ -93,7 +93,7 @@ add the `vertical` class to the carousel element.
 ```
 
 It may be valuable to also lay out the carousel indicators vertically to match
-the new tranition. You can do this with the following CSS.
+the new transition. You can do this with the following CSS.
 
 ``` css
 .carousel.vertical .carousel-indicators {

@@ -9,18 +9,18 @@ naturally require privacy while using the site due to the sensitive subject
 matter of the site.
 
 Before we go any further, I have to preface this post by saying that
-implementing behaviour like this is probably a bad idea in most scenarios.
+implementing behavior like this is probably a bad idea in most scenarios.
 Preventing pages from being stored in the browser history this prevents the back
 button in the browser from working (since there is no history to go back to).
-Manipulating standard browser behaviour like this is always very confusing for
+Manipulating standard browser behavior like this is always very confusing for
 users and may make it appear as if the site is broken. In fact, this
-funtionality was removed from the WHAI site before it launched once the client
+functionality was removed from the WHAI site before it launched once the client
 saw how confusing it was. That being said, if you have found yourself in a
-scenario where you **do** want this behaviour (or if you're just interested in
+scenario where you **do** want this behavior (or if you're just interested in
 how it would work) then read on!
 
-Suprisingly, this feature can be easily implmeneted with just a couple lines of
-code using the `location.repace()` Javascipt method. The
+Surprisingly, this feature can be easily implemented with just a couple lines of
+code using the `location.replace()` JavaScript method. The
 [W3C page](http://www.w3schools.com/jsref/met_loc_replace.asp) for the
 `location.replace()` method describes what the method does:
 
