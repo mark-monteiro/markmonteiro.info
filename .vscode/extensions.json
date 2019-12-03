@@ -6,7 +6,8 @@
 	"recommendations": [
 		"streetsidesoftware.code-spell-checker",
 		"shinnn.stylelint",
-		"davidanson.vscode-markdownlint"
+		"davidanson.vscode-markdownlint",
+		"sissel.shopify-liquid"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
