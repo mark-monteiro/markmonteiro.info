@@ -16,34 +16,59 @@
             <span class='cd-timeline-location'>{{experience.location}}</span>
             <div class="cd-date">{{experience.dates}}</div>
             {{experience.content}}
-            {% if experience.projects or experience.external_projects %}
-                <div class="projects">
-                    <strong>Projects</strong>:&nbsp;
-                    <ul>
-                        {% for project_id in experience.projects %}
-                            {% capture project_id_prefixed %}/projects/{{project_id}}{% endcapture %}
-                            {% for project in site.projects %}
-                                {% if project.id == project_id_prefixed %}
-                                    <li><a href="#{{project_id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
-                                {% endif %}
-                            {% endfor %}
-                        {% endfor %}
 
-                        {% for project in experience.external_projects %}
-                            <li><a href="http://{{project.url}}" title='{{project.name}} Website'>{{project.url}}</a></li>
-                        {% endfor %}
-                    </ul>
+            {% comment %}
+            If there is only one project, display a single button that opens the associated project modal.
+            {% endcomment %}
+
+            {% if experience.projects and experience.projects.size == 1 %}
+                <br/>
+                <div class='text-center'>
+                    <button class='btn btn-info' data-target="#{{experience.projects[0]}}" data-toggle="modal">
+                        Project Details
+                    </button>
                 </div>
-            {% endif %}
-            {% if experience.technologies %}
-                <div class="technologies">
-                    <strong>Technologies</strong>:&nbsp;
-                    <ul>
-                        {% for tech in experience.technologies %}
-                            <li>{{tech}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                
+            {% else %}
+
+                {% comment %}
+                Render project list.
+                {% endcomment %}
+
+                {% if experience.projects or experience.external_projects %}
+                    <div class="projects">
+                        <strong>Projects</strong>:&nbsp;
+                        <ul>
+                            {% for project_id in experience.projects %}
+                                {% capture project_id_prefixed %}/projects/{{project_id}}{% endcapture %}
+                                {% for project in site.projects %}
+                                    {% if project.id == project_id_prefixed %}
+                                        <li><a href="#{{project_id}}" role='button' data-toggle="modal">{{project.title}}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+
+                            {% for project in experience.external_projects %}
+                                <li><a href="http://{{project.url}}" title='{{project.name}} Website'>{{project.url}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% comment %}
+                Render technologies list.
+                {% endcomment %}
+
+                {% if experience.technologies %}
+                    <div class="technologies">
+                        <strong>Technologies</strong>:&nbsp;
+                        <ul>
+                            {% for tech in experience.technologies %}
+                                <li>{{tech}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             {% endif %}
         </div> <!-- cd-timeline-content -->
     </div> <!-- cd-timeline-block -->
