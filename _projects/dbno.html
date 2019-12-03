@@ -1,0 +1,46 @@
+---
+title: DBNO Single Point of Access
+order: 7
+developed: Sept 2017 - May 2018
+technologies:
+- .NET Core Web API
+- EF Core
+- Stateless (state machine library)
+- React
+- Server-side rendering
+- Redux
+- Webpack
+- BrowseAloud
+---
+<p>
+    This application is a web portal for deafblind people and caretakers to apply for intervenor service funding from
+    the government of Ontario.
+</p>
+<p>
+    This project was a special challenge because it was necessary to include as many accessibility features as possible
+    so that it could be navigated and used by users with various visual and auditory impairements. Accessibility 
+    features include:
+</p>
+<ul>
+    <li>Server-side rendering so that pages can be accessed quickly and correctly be screen-readers on first load</li>
+    <li>
+        Usage of <code>aria-*</code> attributes as necessary to support dynamic content on the screen, including page
+        navigation, notifications, form validation messages, etc.
+    </li>
+    <li>
+        Coordination during page navigation to ensure that all server resources are fetched before the navigation
+        completes. This is done to ensure that React is able to render the full page content in a single render cycle so
+        that the dynamic content inserted into the page is read correctly by screen readers.
+    </li>
+    <li>Multiple high-contrast themes as alternatives to the default styling that can be switched to at any time.</li>
+    <li>Pop-up dialogs for each section of content with ASL videos, along with captions and transcripts.</li>
+    <li>
+        Integration with <a href='https://www.texthelp.com/en-gb/products/browsealoud/'>Browsealoud</a> for several
+        additional accessibility features, including text-to-speech.
+    </li>
+</ul>
+<p>
+    The site was tested extensibly features were tested using screenreaders on the site during development, and also tested by users with
+    visual and auditory impairments with success.
+</p>
+    
