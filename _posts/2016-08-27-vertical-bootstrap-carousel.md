@@ -21,43 +21,28 @@ add the `vertical` class to the carousel element.
   height: 100%;
 }
 .carousel.vertical .carousel-inner > .item {
-  -webkit-transition: .6s ease-in-out top;
-  -o-transition: .6s ease-in-out top;
   transition: .6s ease-in-out top;
 }
-@media all and (transform-3d), (-webkit-transform-3d) {
+@media all and (transform-3d) {
 .carousel.vertical .carousel-inner > .item {
-    -webkit-transition: -webkit-transform .6s ease-in-out;
-    -ms-transition: -ms-transform .6s ease-in-out;
-    -o-transition: -o-transform .6s ease-in-out;
     transition: transform .6s ease-in-out;
-    -ms-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -ms-perspective: 1000;
-    -webkit-perspective: 1000;
     perspective: 1000;
   }
 .carousel.vertical .carousel-inner > .item.next,
 .carousel.vertical .carousel-inner > .item.active.right {
     top: 0;
-    -ms-transform: translate3d(0, 100%, 0);
-    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
 .carousel.vertical .carousel-inner > .item.prev,
 .carousel.vertical .carousel-inner > .item.active.left {
     top: 0;
-    -ms-transform: translate3d(0, -100%, 0);
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
 .carousel.vertical .carousel-inner > .item.next.left,
 .carousel.vertical .carousel-inner > .item.prev.right,
 .carousel.vertical .carousel-inner > .item.active {
     top: 0;
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
