@@ -182,6 +182,37 @@
   }
 }
 
+$cd-timeline-content-header-breakpoint: 500px;
+
+.cd-timeline-content-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.cd-timeline-content-header-text {
+  flex-basis: 100%;
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    flex-basis: auto;
+  }
+}
+
+.cd-timeline-collapse-toggle {
+  margin: 0.5em 0;
+  flex-shrink: 0;
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    margin-left: 0.5em;
+  }
+  @media (max-width: #{$cd-timeline-content-header-breakpoint - 1}) {
+    padding: 0.2em 0.5em;
+  }
+}
+
 // Use Modernizr to check for animation support //
 html.cssanimations {
   .cd-timeline-block {

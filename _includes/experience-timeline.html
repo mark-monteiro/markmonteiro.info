@@ -15,23 +15,23 @@
         </div>
         <div class="cd-timeline-content">
 
-            <div class='clearfix'>
-                <div class='pull-right'>
-                    <button
-                        class="btn btn-default"
-                        data-toggle="collapse"
-                        data-target="#{{experience_id}}-collapse"
-                        aria-expanded="false"
-                        aria-controls="{{experience_id}}-collapse"
-                    >
-                        <!-- Content set via JS -->
-                    </button>
+            <div class='cd-timeline-content-header'>
+                <div class='cd-timeline-content-header-text'>
+                    <h2>{{experience.title}}</h2>
+                    <h3>{{experience.company}}</h3>
+                    <span class='cd-timeline-location'>{{experience.location}}</span>
+                    <div class="cd-date">{{experience.dates}}</div>
                 </div>
 
-                <h2>{{experience.title}}</h2>
-                <h3>{{experience.company}}</h3>
-                <span class='cd-timeline-location'>{{experience.location}}</span>
-                <div class="cd-date">{{experience.dates}}</div>
+                <button
+                    class="btn btn-default cd-timeline-collapse-toggle"
+                    data-toggle="collapse"
+                    data-target="#{{experience_id}}-collapse"
+                    aria-expanded="false"
+                    aria-controls="{{experience_id}}-collapse"
+                >
+                    <!-- Content set via JS -->
+                </button>
             </div>
             
             <div class="collapse" id="{{experience_id}}-collapse">
