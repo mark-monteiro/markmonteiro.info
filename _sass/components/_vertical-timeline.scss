@@ -201,8 +201,18 @@ html.cssanimations {
       animation: cd-bounce-2-inverse 0.6s;
     }
     @media only screen and(min-width: 1170px) {
-      &:nth-child(odd) .cd-timeline-content.bounce-in {
-        animation: cd-bounce-2 0.6s;
+
+      .cd-timeline-content.bounce-in .cd-date {
+        animation: cd-bounce-2-double 0.6s;
+      }
+
+      &:nth-child(odd) {
+        .cd-timeline-content.bounce-in {
+          animation: cd-bounce-2 0.6s;
+        }
+        .cd-timeline-content.bounce-in .cd-date {
+          animation: cd-bounce-2-double-inverse 0.6s;
+        }
       }
     }
   }
@@ -344,6 +354,32 @@ html.cssanimations {
   60% {
     opacity: 1;
     transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-double {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px * 2);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px * 2);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-double-inverse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px * 2);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px * 2);
   }
   100% {
     transform: translateX(0);
