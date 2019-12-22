@@ -1,17 +1,35 @@
 ---
 title: Mark Monteiro
-order: 2
+order: 4
 website: http://markmonteiro.info
-source: https://github.com/mark-monteiro/mark-monteiro.github.io
+source: https://github.com/mark-monteiro/markmonteiro.info
 developed: April 2015
 stackshareId: e033102511720d845cb4f272adf1d0
+technologies:
+  - Jekyll
+  - Bootstrap
+  - SASS
+  - CSS3 Animations
+  - Netlify
+  - Travis CI
+  - Stylelint
+  - HTML Proofer
+  - Code Climate
 ---
 <p>
-  This website branched off of a free base theme from <a href="http://startbootstrap.com/template-overviews/freelancer/">startbootstrap.com</a>
+  This website is built with Jekyll, a static website generator. They layout and styling for the site were branched off
+  of a free base theme from <a href="http://startbootstrap.com/template-overviews/freelancer/">startbootstrap.com</a>
   and modified appropriately. A notable modification is the incorporation and modification of a vertical timeline
   from <a href="http://codyhouse.co/gem/vertical-timeline/">codyhouse.co</a>.
 </p>
 <p>
-  The site is hosted using GitHub pages, which profides simple, free hosting for static websites using the Jekyll web framework.
-  The collection and templating features of Jekyll are used to abstract the rendering of each project in the portfolio section.
+  The site is hosted using Netlify, which provides simple, free hosting for static websites using the Jekyll web
+  framework. The collection and templating features of Jekyll are used to abstract the rendering of each project in the
+  portfolio section.
+</p>
+<p>
+  The site also integrates several CI/CD components. New code changes are integrated using GitHub pull requests which
+  automatically runs tests on TravisCI, builds a deployment preview with Netlify, and analyzes code quality with
+  CodeClimate. When all checks have passed the branch is safe to merge into master at which point a new build is
+  automatically triggered and deployed live with Netlify.
 </p>

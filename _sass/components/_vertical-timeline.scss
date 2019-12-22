@@ -3,7 +3,6 @@
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
-  padding: 0 0 2em;
   margin-top: 2em;
   margin-bottom: 2em;
   header {
@@ -149,17 +148,21 @@
   h2 {
     margin: 0;
     color: $dark-blue;
-    font-size: 20px;
     font-size: 1.25rem;
   }
   h3 {
     margin: 0;
     color: $dark-blue;
-    font-size: 17px;
     font-size: 1.1rem;
   }
-  p {
-    margin: 1em 0;
+  ul {
+    @media (max-width: 400px) {
+      padding-left: $grid-gutter-width/2;
+    }
+  }
+  p,
+  p + ul {
+    margin: 0.5em 0;
     line-height: 1.6;
     font-size: 1rem;
   }
@@ -182,6 +185,37 @@
   }
 }
 
+$cd-timeline-content-header-breakpoint: 500px;
+
+.cd-timeline-content-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.cd-timeline-content-header-text {
+  flex-basis: 100%;
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    flex-basis: auto;
+  }
+}
+
+.cd-timeline-collapse-toggle {
+  margin: 0.5em 0;
+  flex-shrink: 0;
+  @media (min-width: $cd-timeline-content-header-breakpoint) {
+    margin-left: 0.5em;
+  }
+  @media (max-width: #{$cd-timeline-content-header-breakpoint - 1}) {
+    padding: 0.2em 0.5em;
+  }
+}
+
 // Use Modernizr to check for animation support //
 html.cssanimations {
   .cd-timeline-block {
@@ -190,27 +224,29 @@ html.cssanimations {
     }
     .cd-timeline-img.bounce-in {
       visibility: visible;
-      -webkit-animation: cd-bounce-1 0.6s;
-      -moz-animation: cd-bounce-1 0.6s;
-      animation: cd-bounce-1 0.6s;
+      animation: expand-bounce 0.6s;
     }
     .cd-timeline-point.bounce-in {
       visibility: visible;
-      -webkit-animation: cd-bounce-1 0.6s;
-      -moz-animation: cd-bounce-1 0.6s;
-      animation: cd-bounce-1 0.6s;
+      animation: expand-bounce 0.6s;
     }
     .cd-timeline-content.bounce-in {
       visibility: visible;
-      -webkit-animation: cd-bounce-2-inverse 0.6s;
-      -moz-animation: cd-bounce-2-inverse 0.6s;
-      animation: cd-bounce-2-inverse 0.6s;
+      animation: slide-bounce-inverse 0.6s;
     }
     @media only screen and(min-width: 1170px) {
-      &:nth-child(odd) .cd-timeline-content.bounce-in {
-        -webkit-animation: cd-bounce-2 0.6s;
-        -moz-animation: cd-bounce-2 0.6s;
-        animation: cd-bounce-2 0.6s;
+
+      .cd-timeline-content.bounce-in .cd-date {
+        animation: slide-bounce-double 0.6s;
+      }
+
+      &:nth-child(odd) {
+        .cd-timeline-content.bounce-in {
+          animation: slide-bounce 0.6s;
+        }
+        .cd-timeline-content.bounce-in .cd-date {
+          animation: slide-bounce-double-inverse 0.6s;
+        }
       }
     }
   }
@@ -251,8 +287,8 @@ html.cssanimations {
     height: $diameter;
     left: 50%;
     margin-left: -$diameter/2;
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
     
     .fa {
       display: inline-block;
@@ -266,8 +302,8 @@ html.cssanimations {
     line-height: 60px;
     left: 50%;
     margin-left: -30px;
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
   
   .cd-timeline-content {
@@ -317,166 +353,69 @@ html.cssanimations {
   }
 }
 
-@-webkit-keyframes cd-bounce-1 {
+@keyframes expand-bounce {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-@-moz-keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    -moz-transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-@keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(0.5);
   }
   60% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(1.2);
   }
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: scale(1);
   }
 }
 
-@-webkit-keyframes cd-bounce-2 {
+@keyframes slide-bounce {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100px);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
-@-moz-keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(-100px);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: translateX(20px);
-  }
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-@keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-    -moz-transform: translateX(-100px);
-    -ms-transform: translateX(-100px);
-    -o-transform: translateX(-100px);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(-100px);
   }
   60% {
     opacity: 1;
-    -webkit-transform: translateX(20px);
-    -moz-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    -o-transform: translateX(20px);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(20px);
   }
   100% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(0);
   }
 }
-@-webkit-keyframes cd-bounce-2-inverse {
+@keyframes slide-bounce-inverse {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100px);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(-20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
-@-moz-keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(100px);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: translateX(-20px);
-  }
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-@keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -o-transform: translateX(100px);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(100px);
   }
   60% {
     opacity: 1;
-    -webkit-transform: translateX(-20px);
-    -moz-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    -o-transform: translateX(-20px);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateX(-20px);
   }
   100% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(0);
+  }
+}
+@keyframes slide-bounce-double {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px * 2);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px * 2);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-bounce-double-inverse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px * 2);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px * 2);
+  }
+  100% {
     transform: translateX(0);
   }
 }

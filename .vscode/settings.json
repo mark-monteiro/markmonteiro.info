@@ -1,5 +1,4 @@
 {
-    
     // Style validation will be done by stylelint, disable built-in linters
     "css.validate": false,
     "less.validate": false, 
@@ -11,5 +10,27 @@
     },
     "[css]": {
         "editor.tabSize": 2,
-    }
+    },
+    "[markdown]": {
+        "editor.rulers": [80]
+    },
+    "[html]": {
+        "editor.rulers": [120]
+    },
+    "cSpell.words": [
+        "Countify",
+        "Innovaction",
+        "Jira",
+        "Laravel",
+        "Multify",
+        "Ontarians",
+        "PDFs",
+        "Renoworks",
+        "Rubygems",
+        "Tarion",
+        "deafblind",
+        "endcase",
+        "rebranded",
+        "templating"
+    ]
 }

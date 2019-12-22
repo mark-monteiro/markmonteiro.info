@@ -1,20 +1,20 @@
 {
-  "name": "mark-monteiro.github.io",
+  "name": "markmonteiro.info",
   "version": "1.0.0",
   "description": "Mark Monteiro's personal website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bundle exec rake test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mark-monteiro/mark-monteiro.github.io.git"
+    "url": "git+https://github.com/mark-monteiro/markmonteiro.info.git"
   },
   "author": "Mark Monteiro",
   "license": "SEE LICENSE IN LICENSE.",
   "bugs": {
-    "url": "https://github.com/mark-monteiro/mark-monteiro.github.io/issues"
+    "url": "https://github.com/mark-monteiro/markmonteiro.info/issues"
   },
-  "homepage": "https://github.com/mark-monteiro/mark-monteiro.github.io#readme",
+  "homepage": "https://github.com/mark-monteiro/markmonteiro.info#readme",
   "devDependencies": {
     "bootstrap-sass": "^3.4.1",
     "stylelint": "^11.0.0",
