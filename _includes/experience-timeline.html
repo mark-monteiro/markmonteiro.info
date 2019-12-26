@@ -1,8 +1,12 @@
 {% for experience in site.experiences reversed %}
 
-    {% assign experience_id = experience.relative_path | slugify %}
+    {% assign experience_id = experience.relative_path |
+        slugify |
+        replace: "experiences-", "experience-" |
+        remove: "-html" | 
+        remove: "-md" %}
 
-	<div class="cd-timeline-block">
+	<div id="{{experience_id}}" class="cd-timeline-block">
         <div class="cd-timeline-point">
             <span class='fa
             {% case experience.category %}
@@ -23,7 +27,8 @@
                     <div class="cd-date">{{experience.dates}}</div>
                 </div>
 
-                <button
+                <a
+                    href='#{{experience_id}}'
                     class="btn btn-default cd-timeline-collapse-toggle"
                     data-toggle="collapse"
                     data-target="#{{experience_id}}-collapse"
@@ -31,7 +36,7 @@
                     aria-controls="{{experience_id}}-collapse"
                 >
                     <!-- Content set via JS -->
-                </button>
+                </a>
             </div>
             
             <div class="collapse" id="{{experience_id}}-collapse">
