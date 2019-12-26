@@ -2,13 +2,6 @@
 layout: default
 email_href: mailto:mark.monteiro23@gmail.com?subject=Awesome%20Job%20Offer%20From%20%5Benter%20your%20company%20name%20here%5D
 ---
-
-{% if page.path == site.homepage %}
-    {% assign navPrefix = '' %}
-{% else %}
-    {% assign navPrefix = site.homepage | prepend: '/' %}
-{% endif %}
-
 <!-- Navigation -->
 <div class='nav-container'>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -21,20 +14,20 @@ email_href: mailto:mark.monteiro23@gmail.com?subject=Awesome%20Job%20Offer%20Fro
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand hidden-sm" href="{{navPrefix}}#page-top">Mark Monteiro</a>
+        <a class="navbar-brand hidden-sm" href="{{site.url}}">Mark Monteiro</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="page-scroll">
-            <a href="{{navPrefix}}#about">About</a>
+            <a href="{{ '#about' | absolute_url }}">About</a>
           </li>
           <li class="page-scroll">
-            <a href="{{navPrefix}}#resume">Experience</a>
+            <a href="{{ '#resume' | absolute_url }}">Experience</a>
           </li>
           <li class="page-scroll">
-            <a href="{{navPrefix}}#portfolio">Portfolio</a>
+            <a href="{{ '#portfolio' | absolute_url }}">Portfolio</a>
           </li>
           <li>
             <a href="/posts.html">Blog</a>
