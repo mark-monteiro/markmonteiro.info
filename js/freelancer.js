@@ -70,7 +70,10 @@ $(function() {
         if (!$target.length) return;
 
         // Scroll to target
-        var scrollTop = $target.offset().top - $('.navbar-fixed-top .navbar-header').height();
+        var scrollTop =
+            $target.offset().top -
+            parseFloat($target.css('margin-top')) -
+            $('.navbar-fixed-top .navbar-header').outerHeight();
         scrollTop = Math.max(scrollTop, 0);
         $('html, body').stop().animate({ scrollTop: scrollTop }, 1500);
     }
