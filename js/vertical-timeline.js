@@ -59,6 +59,13 @@ jQuery(document).ready(function($){
             .not($currentCollapseTarget)
             .filter('.collapse.in')
             .collapse('hide');
+
+        // Update the URL hash
+        // TODO: Add polyfill for URL()
+        var newUrl = new URL(window.location.href);
+        newUrl.hash = $currentTimelineBlock.attr('id');
+        var stateFunction = 'scrollRestoration' in history ? history.pushState : history.replaceState;
+        stateFunction(null, document.title, newUrl.href);
     });
 
     /**
