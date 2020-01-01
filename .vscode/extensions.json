@@ -5,7 +5,7 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
 		"streetsidesoftware.code-spell-checker",
-		"shinnn.stylelint",
+		"stylelint.vscode-stylelint",
 		"davidanson.vscode-markdownlint",
 		"sissel.shopify-liquid"
 	],
