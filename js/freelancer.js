@@ -21,32 +21,42 @@ $(function() {
         $('.navbar-toggle:visible').click();
     });
 
-    // If scrollRestoration is not supported, update location using replaceState(),
-    // because scroll position cannot be controlled if user navigates forward/back.
-    // We also need support for the URL API in this function so check for that as well.
-    if (!scrollRestorationSupported && typeof URL === 'function') {
-        $('body').on('click', '.page-scroll a', function(event) {
-            // Make sure the target URL is on the same page
-            var $anchor = $(this);
-            var targetUrl = new URL($anchor.attr('href'));
-            if (window.location.pathname !== targetUrl.pathname) return;
-            
-            // Update URL with replaceState() and also cancel the original click event
-            history.replaceState(null, document.title, targetUrl.href);
-            event.preventDefault();
-            return false;
-        });
-    }
-
     // Scroll to hash target section on page load and when the hash changes
     if (window.location.hash) scrollToHash();
     window.addEventListener('hashchange', scrollToHash);
+
+    // Add click handler for page scrolling links
+    $('body').on('click', 'a.page-scroll', function(event) {
+        
+        // Make sure the target URL is on the same page. If it is not, do nothing.
+        // TODO: Use URL() with a polyfill
+        var $anchor = $(this);
+        var targetHref = $anchor.attr('href');
+        var targetPathname = targetHref.substring(0, targetHref.indexOf('#'));
+        if (window.location.pathname !== targetPathname) return;
+        
+        // Update the URL manually to prevent the default browser behaviour of jumping to the target element
+        if (!scrollRestorationSupported) {
+            // If scrollRestoration is not supported, update location using replaceState()
+            // to prevent forward/back navigation
+            history.replaceState(null, document.title, targetHref);
+        } else {
+            // Otherwise, use pushState() to update the URL
+            history.pushState(null, document.title, targetHref);
+        }
+
+        // Scroll to the target hash in the updated URL
+        scrollToHash();
+
+        // Cancel the click event. Navigation will be handled by scrolling.
+        event.preventDefault();
+        return false;
+    });
 
     /**
      * Scroll to the section identified by the current URL hash, if any.
      */
     function scrollToHash() {
-
         // Replace #home with an empty hash (will scroll to top of page)
         // NOTE: An empty hash cannot be used in the link directly because it causes the scroll
         // position to jump, even if scrollRestoration is set to 'manual'
@@ -62,14 +72,13 @@ $(function() {
     /**
      * Scroll to a specific section on the current page.
      *
-     * @param {*} sectionId The id of the section to scroll to. This should correspond to the
-     *                      value in a [data-nav-id] attribute on the target element. If
-     *                      a falsy value is provided, the top of the page will be used instead.
+     * @param {*} sectionId The id of the element to scroll to. If a falsy value is provided, the top of the page
+     *                      (<body>) will be used instead.
      */
     function scrollToSection(sectionId) {
         // Get the target element to scroll to; default to the top of the page
-        sectionId = sectionId || "#page-top";
-        var $target = $("[data-nav-id='" + sectionId + "']");
+        var $target = $(sectionId || 'body');
+        if (!$target.length) return;
 
         // Scroll to target
         var scrollTop = $target.offset().top - $('.navbar-fixed-top .navbar-header').height();
