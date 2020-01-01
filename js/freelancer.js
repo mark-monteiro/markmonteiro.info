@@ -55,7 +55,6 @@ $(function() {
      * Scroll to the section identified by the current URL hash, if any.
      */
     function scrollToHash() {
-        // Scroll to the section
         scrollToSection(window.location.hash);
     }
 
