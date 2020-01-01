@@ -29,20 +29,18 @@ $(function() {
     $('body').on('click', 'a.page-scroll', function(event) {
         
         // Make sure the target URL is on the same page. If it is not, do nothing.
-        // TODO: Use URL() with a polyfill
         var $anchor = $(this);
-        var targetHref = $anchor.attr('href');
-        var targetPathname = targetHref.substring(0, targetHref.indexOf('#'));
-        if (window.location.pathname !== targetPathname) return;
+        var targetUrl = URL && new URL($anchor.attr('href'), window.location.origin);
+        if (!targetUrl || window.location.pathname !== targetUrl.pathname) return;
         
         // Update the URL manually to prevent the default browser behaviour of jumping to the target element
         if (!scrollRestorationSupported) {
             // If scrollRestoration is not supported, update location using replaceState()
             // to prevent forward/back navigation
-            history.replaceState(null, document.title, targetHref);
+            history.replaceState(null, document.title, targetUrl.href);
         } else {
             // Otherwise, use pushState() to update the URL
-            history.pushState(null, document.title, targetHref);
+            history.pushState(null, document.title, targetUrl.href);
         }
 
         // Scroll to the target hash in the updated URL
