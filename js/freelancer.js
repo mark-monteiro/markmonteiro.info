@@ -47,10 +47,10 @@ $(function() {
      */
     function scrollToHash() {
 
-        // Replace #page-top with an empty hash
+        // Replace #home with an empty hash (will scroll to top of page)
         // NOTE: An empty hash cannot be used in the link directly because it causes the scroll
         // position to jump, even if scrollRestoration is set to 'manual'
-        if (window.location.hash === "#page-top") {
+        if (window.location.hash === "#home") {
             var baseUrl = window.location.href.substring(0, window.location.href.indexOf('#'));
             history.replaceState(null, document.title, baseUrl + '#');
         }
