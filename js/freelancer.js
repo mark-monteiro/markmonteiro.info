@@ -22,7 +22,7 @@ $(function() {
     });
 
     // If scrollRestoration is not supported, update location using replaceState(),
-    // because scroll position cannot be controlled is user navigates forward/back.
+    // because scroll position cannot be controlled if user navigates forward/back.
     // We also need support for the URL API in this function so check for that as well.
     if (!scrollRestorationSupported && typeof URL === 'function') {
         $('body').on('click', '.page-scroll a', function(event) {
