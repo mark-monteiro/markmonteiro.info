@@ -87,7 +87,7 @@
 
 // =========== ABOUT SECTION =========== //
 
-[data-section-id="#about"] {
+[data-nav-id="#about"] {
   img.portrait {
     margin: 0 auto;
     width: 75%;
@@ -120,7 +120,7 @@
 
 // =========== RESUME SECTION =========== //
 
-[data-section-id="#resume"] {
+[data-nav-id="#resume"] {
   .projects ul, .technologies ul {
     display: inline;
     margin: 0;

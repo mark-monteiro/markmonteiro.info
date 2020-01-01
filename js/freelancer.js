@@ -63,13 +63,13 @@ $(function() {
      * Scroll to a specific section on the current page.
      *
      * @param {*} sectionId The id of the section to scroll to. This should correspond to the
-     *                      value in a [data-section-id] attribute on the target element. If
+     *                      value in a [data-nav-id] attribute on the target element. If
      *                      a falsy value is provided, the top of the page will be used instead.
      */
     function scrollToSection(sectionId) {
         // Get the target element to scroll to; default to the top of the page
         sectionId = sectionId || "#page-top";
-        var $target = $("[data-section-id='" + sectionId + "']");
+        var $target = $("[data-nav-id='" + sectionId + "']");
 
         // Scroll to target
         var scrollTop = $target.offset().top - $('.navbar-fixed-top .navbar-header').height();
