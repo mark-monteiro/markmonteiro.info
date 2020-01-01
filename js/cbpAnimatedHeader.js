@@ -8,6 +8,12 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+
+ /**
+  * This code block monitors the scroll position of the page in order to dynamically set a style
+  * class on the site header. When scrolled past a certain position, the `navbar-shrink` class
+  * is added which reduces the size of the header. 
+  */
 (function() {
 
 	var docElem = document.documentElement,
