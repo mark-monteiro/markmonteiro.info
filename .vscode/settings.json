@@ -17,6 +17,9 @@
     "[html]": {
         "editor.rulers": [120]
     },
+    "[javascript]": {
+        "editor.rulers": [120]
+    },
     "cSpell.words": [
         "Countify",
         "HMIs",
@@ -32,6 +35,7 @@
         "Tarion",
         "deafblind",
         "endcase",
+        "polyfill",
         "rebranded",
         "templating",
         "wireframe"
