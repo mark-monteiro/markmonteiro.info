@@ -6,9 +6,9 @@ dates: Jan 2019 - Current
 category: work
 external_projects:
     - name: Senti Solutions Website
-      url: sentisolutions.ca
+      url: https://sentisolutions.ca
     - name: Yellowstone Extraction Website
-      url: yellowstoneextraction.com
+      url: https://yellowstoneextraction.com
 technologies:
     - Sysmac Studio
     - WPF/Prism
