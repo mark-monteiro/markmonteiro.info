@@ -19,6 +19,6 @@
     "bootstrap-sass": "^3.4.1",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended-scss": "^4.0.0",
-    "stylelint-scss": "^3.11.1"
+    "stylelint-scss": "^3.14.2"
   }
 }
