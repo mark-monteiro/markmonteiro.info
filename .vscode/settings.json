@@ -37,6 +37,7 @@
         "endcase",
         "polyfill",
         "rebranded",
+        "stylelint",
         "templating",
         "wireframe"
     ]

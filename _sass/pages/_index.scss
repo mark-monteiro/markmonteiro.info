@@ -1,5 +1,6 @@
-// =========== HEADER (Banner Image) =========== //
+/* stylelint-disable no-descending-specificity */
 
+// =========== HEADER (Banner Image) =========== //
 .page-banner {
   margin-top: -$header-height;
   text-align: center;
@@ -121,7 +122,8 @@
 // =========== RESUME SECTION =========== //
 
 [data-nav-id="#resume"] {
-  .projects ul, .technologies ul {
+  .projects ul,
+  .technologies ul {
     display: inline;
     margin: 0;
     padding: 0;
