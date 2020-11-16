@@ -8,13 +8,9 @@ highlighter: rouge
 
 # SEO Settings
 title: Mark Monteiro
-description: Mark Monteiro is a software engineer and web developer recently graduated from the University of Waterloo. This is his personal resume website.
+description: Mark Monteiro is a software engineer and web developer. This is his personal website and portfolio.
 url: https://markmonteiro.info
 logo: /favicon-194x194.png
-google_analytics_code: UA-7688784-3
-
-# Custom Settings
-homepage: index.html
 
 defaults:
   -
@@ -24,12 +20,21 @@ defaults:
     values:
       comments: true
 
+# Exclude certain files/directories from processing.
+# By default, dotfiles and The following items will not be processed.
+# "Gemfile"
+# "Gemfile.lock"
+# "node_modules"
+# "vendor/bundle/"
+# "vendor/cache/"
+# "vendor/gems/"
+# "vendor/ruby/"
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - LICENSE
   - README.md
   - Rakefile
+  - package.json
+  - package-lock.json
   
 collections:
   - projects
