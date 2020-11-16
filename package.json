@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Mark Monteiro's personal website",
   "scripts": {
-    "test": "bundle exec rake test"
+    "build": "bundle exec jekyll build",
+    "build:production": "JEKYLL_ENV=production bash -c 'npm run build'",
+    "start": "bundle exec jekyll serve --incremental --livereload",
+    "test": "stylelint _sass/**/*.scss && bundle exec rake test"
   },
   "repository": {
     "type": "git",

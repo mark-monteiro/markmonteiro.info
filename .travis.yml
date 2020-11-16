@@ -9,7 +9,9 @@ cache:
 
 script:
 - nvm use
-- bundle exec rake test
+- npm ci
+- npm run build:production
+- npm test
 
 env:
   global:

@@ -43,7 +43,7 @@ bundle install
 To run the development server bundled with Jekyll, run the following:
 
 ```bash
-bundle exec rake serve
+npm start
 ```
 
 ### VS Code Extensions
@@ -53,10 +53,8 @@ extensions that are supported/recommended to be used during development.
 
 ## Testing
 
-This project is configured to test the generated HTML files using
-[Html-Proofer](https://github.com/gjtorikian/html-proofer). To run this test,
-execute the `test` task:
+To run tests on the site execute the npm `test` task:
 
 ```bash
-bundle exec rake test
+npm test
 ```
