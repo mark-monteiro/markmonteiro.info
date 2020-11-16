@@ -1,6 +1,6 @@
 require 'html-proofer'
 
-task test: [:build] do
+task test: [] do
     options = {
         :check_html => true,
         :check_favicon => true,
