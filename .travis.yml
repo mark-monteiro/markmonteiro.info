@@ -8,6 +8,7 @@ cache:
     - $HOME/.npm
 
 script:
+- nvm install
 - nvm use
 - npm ci
 - npm run build:production
