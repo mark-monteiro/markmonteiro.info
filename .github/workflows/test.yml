@@ -1,0 +1,38 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          cache: 'npm'
+      
+      - name: Install NPM Dependencies
+        run: npm install
+
+      - name: Setup Ruby (and install bundle)
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build Site
+        run: npm run build:production
+
+      - name: Run Tests
+        run: npm test
