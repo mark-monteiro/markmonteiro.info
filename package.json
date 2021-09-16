@@ -6,7 +6,9 @@
     "build": "bundle exec jekyll build",
     "build:production": "JEKYLL_ENV=production bash -c 'npm run build'",
     "start": "bundle exec jekyll serve --incremental --livereload",
-    "test": "stylelint _sass/**/*.scss && bundle exec rake test"
+    "test": "npm run test:stylelint && npm run test:htmlproofer",
+    "test:stylelint": "stylelint _sass/**/*.scss",
+    "test:htmlproofer": "bundle exec rake htmlproofer"
   },
   "repository": {
     "type": "git",
