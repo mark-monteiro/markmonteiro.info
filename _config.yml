@@ -41,6 +41,7 @@ collections:
   - experiences
 
 sass:
+  implementation: sass-embedded
   style: :compressed
 
 plugins:
