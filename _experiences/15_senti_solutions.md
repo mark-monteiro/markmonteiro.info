@@ -10,11 +10,14 @@ external_projects:
     - name: Yellowstone Extraction Website
       url: https://yellowstoneextraction.com
 technologies:
-    - Sysmac Studio
+    - C#/.NET Core/.NET Framework
+    - EF Core
     - WPF/Prism
-    - Balsamic Cloud Wireframes
+    - gRPC/protobuf
     - Gitlab
     - Gitlab Pipelines
+    - Sysmac Studio
+    - Balsamic Cloud Wireframes
     - Jekyll
     - SASS
     - Bootstrap 4
