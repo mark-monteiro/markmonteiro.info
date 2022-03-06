@@ -157,7 +157,7 @@
   }
   ul {
     @media (max-width: 400px) {
-      padding-left: $grid-gutter-width/2;
+      padding-left: $grid-gutter-width*0.5;
     }
   }
   p,
@@ -286,7 +286,7 @@ html.cssanimations {
     width: $diameter;
     height: $diameter;
     left: 50%;
-    margin-left: -$diameter/2;
+    margin-left: -$diameter*0.5;
     transform: translateZ(0);
     backface-visibility: hidden;
     

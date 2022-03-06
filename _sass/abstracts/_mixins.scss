@@ -3,8 +3,10 @@
 // -----------------------------------------------------------------------------
 
 // Convert pixels to em
+@use "sass:math";
+
 @function em($pixels, $context: $font-size-base) {
-  @return #{$pixels/$context}em;
+  @return #{math.div($pixels, $context)}em;
 }
 
 // Centering things (with reduced browser support)
