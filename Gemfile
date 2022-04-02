@@ -19,6 +19,10 @@ gem "jekyll", "~> 4.2"
 # See: https://github.com/jekyll/jekyll-sass-converter#sass-embedded
 gem 'sass-embedded', '~> 1.0'
 
+# Fix issue with jekyll-autoprefixer
+# See: https://github.com/vwochnik/jekyll-autoprefixer/issues/11
+gem 'execjs', '~> 2.7.0'
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
