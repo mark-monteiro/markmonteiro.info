@@ -13,16 +13,10 @@ GEM
     ethon (0.15.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    eventmachine (1.2.7-x64-mingw32)
-    eventmachine (1.2.7-x86-mingw32)
     execjs (2.8.1)
     ffi (1.15.5)
-    ffi (1.15.5-x64-mingw32)
-    ffi (1.15.5-x86-mingw32)
     forwardable-extended (2.6.0)
     google-protobuf (3.20.0)
-    google-protobuf (3.20.0-x64-mingw32)
-    google-protobuf (3.20.0-x86-mingw32)
     html-proofer (3.19.3)
       addressable (~> 2.3)
       mercenary (~> 0.3)
@@ -74,10 +68,6 @@ GEM
     nokogiri (1.13.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.13.3-x64-mingw32)
-      racc (~> 1.4)
-    nokogiri (1.13.3-x86-mingw32)
-      racc (~> 1.4)
     parallel (1.22.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -96,8 +86,6 @@ GEM
       rake (>= 10.0.0)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc (2.4.0-x64-mingw32)
-      ffi (~> 1.9)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     typhoeus (1.4.0)
@@ -107,8 +95,6 @@ GEM
 
 PLATFORMS
   ruby
-  x64-mingw32
-  x86-mingw32
 
 DEPENDENCIES
   html-proofer
