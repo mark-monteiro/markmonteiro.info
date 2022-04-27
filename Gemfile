@@ -17,7 +17,7 @@ gem "jekyll", "~> 4.2"
 # Enable support for sass-embedded, which uses dart-sass. The default
 # configuration uses the deprecated sassc/LibSass implementation
 # See: https://github.com/jekyll/jekyll-sass-converter#sass-embedded
-gem 'sass-embedded', '~> 1.4'
+gem 'sass-embedded', '~> 1.5'
 
 # Fix issue with jekyll-autoprefixer
 # See: https://github.com/vwochnik/jekyll-autoprefixer/issues/11
