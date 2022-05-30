@@ -22,7 +22,7 @@
   "homepage": "https://github.com/mark-monteiro/markmonteiro.info#readme",
   "devDependencies": {
     "bootstrap-sass": "^3.4.3",
-    "stylelint": "^14.8.2",
+    "stylelint": "^14.8.5",
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-scss": "^4.2.0"
   }
