@@ -13,6 +13,6 @@ after the vendors they overwrite. For instance,
 to re-declare some of Bootstrap’s default CSS. This is to avoid editing the
 vendor files themselves, which is generally not a good idea.
 
-Reference: [Sass Guidelines](http://sass-guidelin.es/) >
-[Architecture](http://sass-guidelin.es/#architecture) >
-[Vendors folder](http://sass-guidelin.es/#vendors-folder)
+Reference: [Sass Guidelines](https://sass-guidelin.es/) >
+[Architecture](https://sass-guidelin.es/#architecture) >
+[Vendors folder](https://sass-guidelin.es/#vendors-folder)

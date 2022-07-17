@@ -7,6 +7,6 @@ basically anything along those lines. There are usually a lot of files in
 `components/` since the whole site/application should be mostly composed of tiny
 modules.
 
-Reference: [Sass Guidelines](http://sass-guidelin.es/) >
-[Architecture](http://sass-guidelin.es/#architecture) >
-[Components folder](http://sass-guidelin.es/#components-folder)
+Reference: [Sass Guidelines](https://sass-guidelin.es/) >
+[Architecture](https://sass-guidelin.es/#architecture) >
+[Components folder](https://sass-guidelin.es/#components-folder)

@@ -4,7 +4,7 @@ title: Block Browser History With Javascript
 ---
 Recently I was working on a site with a unique requirement: no pages on the site
 should be stored in the user's browser history. This was a site for the
-[Women & HIV/AIDS Health Initiative (WHAI)](http://www.whai.ca/), where users
+[Women & HIV/AIDS Health Initiative (WHAI)](https://whai.ca/), where users
 naturally require privacy while using the site due to the sensitive subject
 matter of the site.
 
@@ -21,7 +21,7 @@ how it would work) then read on!
 
 Surprisingly, this feature can be easily implemented with just a couple lines of
 code using the `location.replace()` JavaScript method. The
-[W3C page](http://www.w3schools.com/jsref/met_loc_replace.asp) for the
+[W3C page](https://www.w3schools.com/jsref/met_loc_replace.asp) for the
 `location.replace()` method describes what the method does:
 
 > replace() removes the URL of the current document from the document history,

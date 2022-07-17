@@ -11,6 +11,6 @@ distribution, it might be a fine idea to name this file `index.scss` rather than
 See [#21](https://github.com/HugoGiraudel/sass-boilerplate/issues/21) for
 reference.*
 
-Reference: [Sass Guidelines](http://sass-guidelin.es/) >
-[Architecture](http://sass-guidelin.es/#architecture) >
-[Main file](http://sass-guidelin.es/#main-file)
+Reference: [Sass Guidelines](https://sass-guidelin.es/) >
+[Architecture](https://sass-guidelin.es/#architecture) >
+[Main file](https://sass-guidelin.es/#main-file)
