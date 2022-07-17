@@ -5,6 +5,6 @@ or application. This folder could have stylesheets for the main parts of the
 site (header, footer, navigation, sidebar…), the grid system or even CSS styles
 for all the forms.
 
-Reference: [Sass Guidelines](http://sass-guidelin.es/) >
-[Architecture](http://sass-guidelin.es/#architecture) >
-[Layout folder](http://sass-guidelin.es/#layout-folder)
+Reference: [Sass Guidelines](https://sass-guidelin.es/) >
+[Architecture](https://sass-guidelin.es/#architecture) >
+[Layout folder](https://sass-guidelin.es/#layout-folder)
