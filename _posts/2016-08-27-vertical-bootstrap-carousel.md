@@ -157,7 +157,7 @@ $(window).on(wheelEvent, function (e) {
 ## Demo
 
 <p data-height="688" data-theme-id="0" data-slug-hash="WxVOYE" data-default-tab="result" data-user="mark-monteiro" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/mark-monteiro/pen/WxVOYE/">Vertical Bootstrap Carousel</a> by Monteiro (<a href="https://codepen.io/mark-monteiro">@mark-monteiro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Credits
 
