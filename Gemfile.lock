@@ -16,7 +16,7 @@ GEM
     execjs (2.7.0)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
-    google-protobuf (3.21.5)
+    google-protobuf (3.21.7)
     html-proofer (4.4.1)
       addressable (~> 2.3)
       mercenary (~> 0.3)
