@@ -16,7 +16,7 @@ GEM
     execjs (2.7.0)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
-    google-protobuf (3.21.7)
+    google-protobuf (3.21.9)
     html-proofer (4.4.1)
       addressable (~> 2.3)
       mercenary (~> 0.3)
@@ -83,7 +83,7 @@ GEM
     rexml (3.2.5)
     rouge (4.0.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.54.6)
+    sass-embedded (1.55.0)
       google-protobuf (~> 3.19)
       rake (>= 10.0.0)
     sassc (2.4.0)
@@ -109,7 +109,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   rake
-  sass-embedded (~> 1.54)
+  sass-embedded (~> 1.55)
 
 BUNDLED WITH
    2.1.4
