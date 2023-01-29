@@ -21,7 +21,7 @@ gem 'sass-embedded', '~> 1.54'
 
 # Fix issue with jekyll-autoprefixer
 # See: https://github.com/vwochnik/jekyll-autoprefixer/issues/11
-gem 'execjs', '~> 2.7.0'
+gem 'execjs', '~> 2.8.1'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
