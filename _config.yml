@@ -20,6 +20,11 @@ defaults:
     values:
       comments: true
 
+# Files to include
+# See: https://docs.netlify.com/routing/redirects/
+include:
+  - _redirects
+
 # Exclude certain files/directories from processing.
 # By default, dotfiles and The following items will not be processed.
 # "Gemfile"
